@@ -1,0 +1,19 @@
+<ifModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(adocao)/?$ adocao.php [NC,L]
+RewriteRule ^(colaboradores)/?$ colaboradores.php [NC,L]
+RewriteRule ^(pesquisa)/?$ pesquisa.php [NC,L]
+RewriteRule ^(filtro)/?$ filtro.php [NC,L]
+RewriteRule ^(doacao)/?$ doacao.php [NC,L]
+RewriteRule ^(contato)/?$ contato.php [NC,L]
+RewriteRule ^(sobre)/?$ sobre.php [NC,L]
+
+RewriteRule ^(detalhe)/([a-z0-9-]+)/?$ detalhe.php?url=$2 [NC]
+RewriteRule ^(adocao)/([a-z0-9-]+)/?$ adocao.php?pagina_atual=$2 [NC]
+RewriteRule ^(filtrar)/([a-z0-9-]+)/?$ filtrar.php?pagina_atual=$2 [NC]
+
+</ifModule>

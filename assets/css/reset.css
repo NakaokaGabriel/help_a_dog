@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Muli';
+}
+
+*::selection{
+    background: #ffa623;
+    color: #f7f0e0;
+}
+
+body{
+    background: #fff5ee;
+}
+
+p{
+    line-height: 1.4em;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, textarea{
+    font-family: 'Muli', Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    border: none;
+}
+
+fieldset{
+    border: none;
+}
+
+.button{
+    padding: 10px 15px;
+    margin: 20px 0;
+}

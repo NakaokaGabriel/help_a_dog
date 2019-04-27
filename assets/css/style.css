@@ -1,0 +1,857 @@
+/* RESET ALGUNS VALORES QUE SERÃO PADRÕES */
+
+/* -------------------------------------------
+BOTÕES 
+------------------------------------------- */
+#header a, #donations a, #adoption a, #last-dogs a, #suggestion .col-align .button{
+    background: #2487ff;
+    color: #f7f0e0;
+}
+
+#header a:hover, #donations a:hover, #adoption a:hover, #last-dogs a:hover{
+    background: #1880e1;
+}
+
+#header a, #donations a, #adoption a, #last-dogs a, #contact button{
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* SEPARAÇÃO DE SEÇÕES */
+#quem-somos, #donations, #adoption, #last-dogs, #contact{
+    padding: 20px 0;
+}
+
+/*-------------------------------------------
+TITULOS 
+-------------------------------------------*/
+#quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+#quem-somos h2:after, #donations h2:after, #adoption h2:after, #last-dogs h2:after, #contact h2:after, #title h1:after{
+    content: '';
+    display: block;
+    margin: 10px auto;
+    height: 5px;
+    width: 150px;
+}
+
+@media screen and (min-width: 768px)
+{
+    #quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    #quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+        font-size: 3em;
+    }
+}
+
+#donations h2, #adoption h2, #contact h2, #title h1{
+    color: #ffa623;
+    text-align: center;
+}
+
+#donations h2:after, #adoption h2:after, #contact h2:after, #title h1:after{
+    background: #ffa623;
+    width: 100px;
+    height: 4px;
+    margin-bottom: 40px;
+}
+
+#donations h3, #adoption h3{
+    font-size: 2em;
+    color: #3f3e3e;
+    margin: 40px 0 20px 0;
+}
+
+#title{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/*------------------------------------------- 
+PARAGRAFOS 
+-------------------------------------------*/
+#quem-somos p, #donations p, #adoption p, #last-dogs p, #contact p, #title p{
+    color: #3f3e3e;
+}
+
+/* -------------------------------------------
+ ALINHAMENTO 
+------------------------------------------- */
+
+#donations .col-align, #adoption .col-align, #last-dogs .col-align, #contact-detail .col-align, #suggestion .col-align{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px)
+{
+    #donations .row .col-6, #adoption .row .col-6{
+        margin: 40px 20px;
+    }
+
+    #donations .col-align, #adoption .col-align{
+        text-align: left;
+    }
+
+    /* ADOÇÃO */
+    #adoption .col-align{
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    #donations h3, #adoption h3{
+        font-size: 3em;
+    }
+}
+
+/* -------------------------------------------
+FORMULARIOS 
+-------------------------------------------*/
+
+#contact .col-12, #contact-detail .col-12{
+    margin: 0 25px 0 5px;
+}
+
+#contact .col-6, #contact-detail .col-6{
+    margin: 0 5px;
+}
+
+#contact label, #contact-detail  label{
+    display: block;
+    color: #3f3e3e;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#contact input, #contact-detail input{
+    border: 2px solid #3f3e3e;
+    background: transparent;
+    height: 30px;
+    width: 95%;
+    padding-left: 5px;
+}
+
+#contact textarea, #contact-detail textarea{
+    border: 2px solid #3f3e3e;
+    background: transparent;
+    height: 150px;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#contact button, #contact-detail button{
+    background: #ffa623;
+    color: #f7f0e0;
+}
+
+@media screen and (min-width: 1440px)
+{
+    #contact .col-12, #contact-detail .col-12{
+        margin: 0 35px 0 5px;
+    }
+}
+
+/* 
+---------------------------------
+FIM RESET
+---------------------------------
+*/
+
+/* -------------------------------------------
+CABEÇALHO 
+------------------------------------------- */
+#header{
+    background: url('../images/background/small-bg.jpg') no-repeat 50% 15%;
+    padding: 100px 0 300px 0;
+}
+
+#header .content{
+    text-align: center;
+    color: #3f3e3e;
+}
+
+#header .content h1{
+    font-size: 2.5em;
+}
+
+#header .content h1::after{
+    content: '';
+    display: block;
+    margin: 20px auto;
+    background: #3f3e3e;
+    width: 100px;
+    height: 1px;
+}
+
+@media screen and (min-width: 768px)
+{
+    #header{
+        background: url('../images/background/normal-bg.jpg') no-repeat 50% 25%;
+        padding: 250px 0 180px 0;
+    }
+
+    #header .content{
+        text-align: center;
+    }
+
+    #header .content h1{
+      font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 1440px)
+{
+    #header{
+        background: url('../images/background/big-bg.jpg') no-repeat 50% 35%;
+        padding: 300px 0 200px 0;
+    }
+
+    #header .content{
+        text-align: center;
+    }
+
+    #header .content h1{
+      font-size: 5em;
+  }
+}
+
+/* -------------------------------------------
+MENU 
+-------------------------------------------*/
+
+#menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: .2s linear;
+}
+
+#menu.animaMenu{
+    background: #ffa623;
+}
+
+#menu.animaMenu .menu .logo svg path, #menu.animaMenu .menu .logo svg text{
+    fill: #f7f0e0;
+    transition: .2s linear;
+}
+
+#menu .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+#menu .menu .inside-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px 15px;
+}
+
+#menu .menu .logo{
+    width: 150px;
+}
+
+#menu .menu .logo svg path, #menu .menu .logo svg text{
+    fill: #ffa623;
+    transition: .2s linear;
+}
+
+#menu .menu .list{
+    position: absolute;
+    background: #ffa623;
+    left: 0;
+    top: -400px;
+    width: 100%;
+    text-align: center;
+    transition: .2s linear;
+}
+
+#menu .menu .list.activeMenu{
+    top: 60px;
+}
+
+#menu .menu .list ul li a{
+    display: block;
+    padding: 20px 0;
+    color: #f7f0e0;
+}
+
+#menu .menu .menu-mobile{
+    width: 20px;
+    height: 10px;
+    position: relative;
+}
+
+#menu .menu .menu-mobile span{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #ffa623;
+    transition: .4s linear;
+}
+#menu.animaMenu .menu .menu-mobile span{
+    background: #f7f0e0;
+}
+#menu .menu .menu-mobile span:nth-child(2){top: 5px;}
+#menu .menu .menu-mobile span:nth-child(3){top: 10px;}
+
+#menu .menu .menu-mobile.activeIcon span{
+    transform: rotate(45deg);
+}
+#menu .menu .menu-mobile.activeIcon span:nth-child(2){
+    width: 0;
+}
+#menu .menu .menu-mobile.activeIcon span:nth-child(3){
+    transform:rotate(-45deg) translate(7px, -7px);
+}
+
+@media screen and (min-width: 768px)
+{
+    #menu .menu .menu-mobile{
+      display: none;
+    }
+
+    #menu .menu .inside-menu{
+        background: unset;
+    }
+
+    #menu .menu .list{
+        position: unset;
+        background: unset;
+        left: unset;
+        top: unset;
+        width: unset;
+        text-align: unset;
+    }
+
+    #menu .menu .list ul{
+      display: flex;
+    }
+
+    #menu .menu .list ul li a{
+      display: block;
+      margin: 0 5px;
+      padding: 0;
+      color: #ffa623;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    #menu.animaMenu .menu .list ul li a{
+      color: #f7f0e0;
+    }
+    #menu.animaMenu .menu .list ul li a.on{
+      color: #2d2b2b;
+    }
+
+    #menu .menu .list ul li a.on{
+        color: #2487ff;
+    }
+}
+
+/* -------------------------------------------
+QUEM SOMOS 
+------------------------------------------- */
+
+#quem-somos{
+    background: #ffa623;
+}
+
+#quem-somos .center-box{
+    text-align: center;
+}
+
+#quem-somos .col-3{
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+#quem-somos .center-box h2{
+    color: #f7f0e0;
+}
+
+#quem-somos .center-box h2:after{
+    background: #f7f0e0;
+}
+
+/* -------------------------------------------
+LISTA 
+------------------------------------------- */
+
+#last-dogs{
+    background: #ffa623;
+    padding: 60px 0;
+}
+
+#last-dogs h2{
+    color: #f7f0e0;
+    text-align: center;
+}
+
+#last-dogs :after{
+    background: #f7f0e0;
+}
+
+#last-dogs .row .col-4, #list-dogs .row .col-4, #suggestion .row .col-4{
+    margin: 40px 10px;
+}
+
+#last-dogs .row .col-4 .box-dogs, #list-dogs .row .col-4 .box-dogs, #suggestion .row .col-4 .box-dogs{
+    position: relative;
+}
+#last-dogs .row .col-4 .box-dogs img, #list-dogs .row .col-4 .box-dogs img, #suggestion .row .col-4 .box-dogs img{
+    width: 100%;
+    height: 220px;
+}
+
+#last-dogs .row .col-4 .box-dogs .info-dogs, #list-dogs .row .col-4 .box-dogs .info-dogs, #suggestion .row .col-4 .box-dogs .info-dogs{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #ffffff;
+    align-items: center;
+    position: relative;
+    top: -10px;
+}
+
+#last-dogs .row .col-4 .box-dogs .info-dogs svg, #list-dogs .row .col-4 .box-dogs .info-dogs svg, #suggestion .row .col-4 .box-dogs .info-dogs svg{
+    width: 15px;
+    height: 15px;
+}
+
+#last-dogs .row .col-4 .box-dogs p, #list-dogs .row .col-4 .box-dogs p, #suggestion .row .col-4 .box-dogs p{
+    text-transform: capitalize;
+}
+
+#last-dogs .row .col-align, #list-dogs .row .col-align, #suggestion .row .col-align{
+    margin-top: 40px;
+}
+
+#list-dogs .button-dogs, #suggestion .button-dogs{
+    text-align: center;
+    background: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 10px;
+}
+
+#list-dogs .button-dogs a, #suggestion .button-dogs a{
+    color: #ffa623;
+    border: 2px solid #ffa623;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+#list-dogs{
+    padding-bottom: 80px;
+}
+
+#list-dogs #lista{
+    border-top: 1px solid #848383;
+}
+
+#list-dogs #lista .pags{
+    padding: 20px 0 10px 0;
+    color: #848383;
+}
+
+#list-dogs #lista .pags a{
+    color: #ffa623 ;
+}
+
+#list-dogs .paginacao{
+    display: block;
+    text-align: center;
+}
+
+#list-dogs .paginacao ul{
+    margin: 20px 0;
+}
+
+#list-dogs .paginacao ul li{
+    display: inline-block;
+}
+
+#list-dogs .paginacao ul li a{
+    padding: 5px 10px;
+    border: 1px solid #ffa623;
+    color: #ffa623;
+}
+
+#list-dogs .paginacao ul li .active-pag{
+    background: #ffa623;
+    color: #fff5ee;
+}
+
+#list-dogs .paginacao p{
+    color: #3f3e3e;
+}
+
+#list-dogs .paginacao p span{
+    padding: 5px 10px;
+    background: #ffa623;
+    color: #fff5ee;
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 768px)
+{
+    #last-dogs .row .col-align, #list-dogs .row .col-align{
+        display: block;
+        width: 100%;
+    }
+
+    #list-dogs .row{
+        flex-wrap: wrap;
+    }
+
+    #list-dogs .row .col-4{
+        width: 210px;
+    }
+
+    #list-dogs .paginacao{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    #list-dogs .row .col-4{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    #list-dogs .row .col-4{
+        width: 405px;
+    }
+}
+
+/* -------------------------------------------
+RODAPÉ
+------------------------------------------- */
+
+#rodape{
+    background: #ffa623;
+    padding: 40px 0;
+}
+
+#rodape .logo{
+    width: 100%;
+}
+
+#rodape .logo svg{
+    width: 300px;
+}
+
+#rodape .footer-menu h4, #rodape .contact h4{
+    color: #f7f0e0;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+#rodape .footer-menu h4:after, #rodape .contact h4:after{
+    content: '';
+    display: block;
+    background: #f7f0e0;
+    width: 60px;
+    height: 3px;
+    margin: 10px 0;
+}
+
+#rodape ul li a, #rodape ul li{
+    color: #f7f0e0;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#rodape img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#rodape .aviso{
+    border-top: 1px solid #f7f0e0;
+    margin-top: 40px;
+    color: #f7f0e0;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* -------------------------------------------
+PESQUISA E FILTRO 
+------------------------------------------- */
+
+#search{
+    padding: 40px 0;
+}
+
+#search .box{
+    text-align: center;
+}
+
+#search .box input{
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #2d2b2b;
+    border-left: none;
+    background: transparent;
+    width: 40%;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+}
+
+#search .box button{
+    background: transparent;
+    outline: none;
+    position: relative;
+    left: -25px;
+}
+
+#search .box button svg{
+    width: 15px;
+}
+
+#filter{
+    padding: 40px 0;
+    text-align: center;
+}
+
+#filter p{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#filter .filter {
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filter label{
+    border: 1px solid #ffa623;
+    padding: 10px;
+    margin: 5px 0;
+    color: #3f3e3e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#filter input[type="radio"]{
+    visibility: hidden;
+}
+
+#filter input[type="radio"]:checked + label{
+    background: #ffa623;
+    color: #fffbf8;
+}
+
+#filter button{
+    background: #ffa623;
+    color: #fffbf8;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    #filter label{
+        padding: 10px 5px;
+    }
+}
+
+/* -------------------------------------------
+DETALHES 
+------------------------------------------- */
+
+#tittle-dog{
+    padding: 120px 0 0 10px;
+}
+
+#tittle-dog h1{
+    font-size: 3em;
+    text-transform: capitalize;
+    color: #3f3e3e;
+    letter-spacing: 2px;
+}
+
+#detail{
+    margin: 10px 10px;
+}
+
+#detail .current-pag, #detail .current-pag a{
+    color: #848383;
+    border-top: 1px solid #848383;
+    padding: 10px 0 30px 0;
+    text-transform: capitalize;
+}
+
+#detail .current-pag a{
+    color: #ffa623;
+}
+
+#detail .col-6{
+    margin: 0 10px;
+}
+
+#detail img{
+    width: 600px;
+    height: 300px;
+}
+
+#detail .about, #detail .detail{
+    margin: 20px 0;
+    color: #3f3e3e;
+}
+
+#detail .about h2, #detail .detail h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#detail .about p{
+    margin-left: 60px;
+    position: relative;
+}
+#detail .about p:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background: #3f3e3e;
+    left: -60px;
+    top: 10px;
+}
+
+#detail .detail p{
+    padding: 0 10px;
+}
+
+#detail .detail p span{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 1000px;
+}
+
+#detail .detail p span.on{background: #2487ff;}
+#detail .detail p span.off{background: #ff3312;}
+
+#contact-detail, #suggestion{
+    margin: 60px 0;
+    padding: 0 10px;
+}
+
+#contact-detail h2, #suggestion h2{
+    font-size: 2em;
+    color: #ffa623;
+    margin-bottom: 10px;
+}
+
+#contact-detail h2:after, #suggestion h2:after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #ffa623;
+    margin: 10px 0 0 0;
+}
+
+#contact-detail p, #suggestion p{
+    color: #848383;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact ul li a, #contact ul li{
+    color: #ffa623;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px)
+{
+    #detail .about, #detail .detail{
+        margin: 0 0 20px 0;
+    }
+
+    #detail .about h2, #detail .detail h2, #contact-detail h2, #suggestion h2{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    #detail img{
+        height: 400px;
+    }
+}
+
+#page-contact textarea{
+    width: 95%;
+}
+
+/* -------------------------------------------
+SOBRE NÓS 
+------------------------------------------- */
+
+#about{
+    padding: 150px 10px;
+}
+
+#about h1, #about h2{
+    font-size: 2.5em;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #3f3e3e;
+}
+
+#about .col-6 p{
+    margin: 20px 0 20px 40px;
+    position: relative;
+    color: #3f3e3e;
+}
+
+#about .col-6 p:nth-child(2):before{
+    content: '';
+    position: absolute;
+    background: #3f3e3e;
+    width: 1px;
+    height: 300px;
+    left: -30px;
+    top: 5px;
+}
+
+#about .about-footer{
+    border-top: 1px solid #3f3e3e;
+    margin: 60px 0 0 0;
+}
+
+#about .about-footer p{
+    color: #3f3e3e;
+    text-align: center;
+    margin-top: 20px;
+}

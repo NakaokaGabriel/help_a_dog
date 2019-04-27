@@ -1,0 +1,79 @@
+.container{
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px)
+{
+    .container{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .row{
+        display: flex;
+    }
+        
+    .col-1{width: 55px; margin: 0 auto;}
+    .col-2{width: 120px; margin: 0 auto;}
+    .col-3{width: 185px; margin: 0 auto;}
+    .col-4{width: 250px; margin: 0 auto;}
+    .col-5{width: 315px; margin: 0 auto;}
+    .col-6{width: 380px; margin: 0 auto;}
+    .col-7{width: 445px; margin: 0 auto;}
+    .col-8{width: 510px; margin: 0 auto;}
+    .col-9{width: 575px; margin: 0 auto;}
+    .col-10{width: 640px; margin: 0 auto;}
+    .col-11{width: 705px; margin: 0 auto;}
+    .col-12{width: 768px; margin: 0 auto;}
+}
+
+@media screen and (min-width: 1024px)
+{
+    .container{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .row{
+        display: flex;
+    }
+    
+    .col-1{width: 70px; margin: 0 auto;}
+    .col-2{width: 150px; margin: 0 auto;}
+    .col-3{width: 230px; margin: 0 auto;}
+    .col-4{width: 315px; margin: 0 auto;}
+    .col-5{width: 395px; margin: 0 auto;}
+    .col-6{width: 475px; margin: 0 auto;}
+    .col-7{width: 555px; margin: 0 auto;}
+    .col-8{width: 635px; margin: 0 auto;}
+    .col-9{width: 715px; margin: 0 auto;}
+    .col-10{width: 800px; margin: 0 auto;}
+    .col-11{width: 880px; margin: 0 auto;}
+    .col-12{width: 960px; margin: 0 auto;}
+}
+
+@media screen and (min-width: 1440px)
+{
+    .container{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .row{
+        display: flex;
+    }
+
+    .col-1{width: 90px; margin: 0 auto;}
+    .col-2{width: 200px; margin: 0 auto;}
+    .col-3{width: 310px; margin: 0 auto;}
+    .col-4{width: 415px; margin: 0 auto;}
+    .col-5{width: 525px; margin: 0 auto;}
+    .col-6{width: 630px; margin: 0 auto;}
+    .col-7{width: 740px; margin: 0 auto;}
+    .col-8{width: 850px; margin: 0 auto;}
+    .col-9{width: 960px; margin: 0 auto;}
+    .col-10{width: 1070px; margin: 0 auto;}
+    .col-11{width: 1180px; margin: 0 auto;}
+    .col-12{width: 1280px; margin: 0 auto;}
+}
