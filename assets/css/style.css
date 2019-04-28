@@ -95,7 +95,7 @@ PARAGRAFOS
 
 @media screen and (min-width: 768px)
 {
-    #donations .row .col-6, #adoption .row .col-6{
+    #adoption .row .col-6{
         margin: 40px 20px;
     }
 
@@ -854,4 +854,21 @@ SOBRE NÓS
     color: #3f3e3e;
     text-align: center;
     margin-top: 20px;
+}
+
+#donations .valors{
+    border-top: 1px solid #848383;
+    padding: 30px 0;
+}
+
+#donations .valors p{
+    margin-bottom: 40px;
+}
+
+#donations .valors p span{
+    background: #ffa623;
+    color: #f7f0e0;
+    padding: 6px 10px;
+    border-radius: 1000px;
+    margin-right: 5px;
 }

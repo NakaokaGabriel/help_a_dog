@@ -48,7 +48,7 @@
         <div class="container">
             <form action="">
                 <div class="tips">
-                    <fieldset name="valores">
+                    <fieldset name="valores" class="valors">
                         <p><span>1</span> Valores de pagamento</p>
                         <div class="row">
                             <div class="col-3">
