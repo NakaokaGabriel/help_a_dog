@@ -3,36 +3,36 @@
 /* -------------------------------------------
 BOTÕES 
 ------------------------------------------- */
-#header a, #donations a, #adoption a, #last-dogs a, #suggestion .col-align .button{
+#header a, #donation a, #adoption a, #last-dogs a, #suggestion .col-align .button{
     background: #2487ff;
     color: #f7f0e0;
 }
 
-#header a:hover, #donations a:hover, #adoption a:hover, #last-dogs a:hover{
+#header a:hover, #donation a:hover, #adoption a:hover, #last-dogs a:hover{
     background: #1880e1;
 }
 
-#header a, #donations a, #adoption a, #last-dogs a, #contact button{
+#header a, #donation a, #adoption a, #last-dogs a, #contact button{
     padding: 10px 15px;
     display: inline-block;
 }
 
 /* SEPARAÇÃO DE SEÇÕES */
-#quem-somos, #donations, #adoption, #last-dogs, #contact{
+#quem-somos, #donation, #adoption, #last-dogs, #contact{
     padding: 20px 0;
 }
 
 /*-------------------------------------------
 TITULOS 
 -------------------------------------------*/
-#quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+#quem-somos h2, #donation h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
     margin: 20px 0;
     font-weight: bold;
     font-size: 2em;
     letter-spacing: 1px;
 }
 
-#quem-somos h2:after, #donations h2:after, #adoption h2:after, #last-dogs h2:after, #contact h2:after, #title h1:after{
+#quem-somos h2:after, #donation h2:after, #adoption h2:after, #last-dogs h2:after, #contact h2:after, #title h1:after{
     content: '';
     display: block;
     margin: 10px auto;
@@ -42,31 +42,31 @@ TITULOS
 
 @media screen and (min-width: 768px)
 {
-    #quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+    #quem-somos h2, #donation h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
         font-size: 2.5em;
     }
 }
 
 @media screen and (min-width: 1024px)
 {
-    #quem-somos h2, #donations h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
+    #quem-somos h2, #donation h2, #adoption h2, #last-dogs h2, #contact h2, #title h1{
         font-size: 3em;
     }
 }
 
-#donations h2, #adoption h2, #contact h2, #title h1{
+#donation h2, #adoption h2, #contact h2, #title h1{
     color: #ffa623;
     text-align: center;
 }
 
-#donations h2:after, #adoption h2:after, #contact h2:after, #title h1:after{
+#donation h2:after, #adoption h2:after, #contact h2:after, #title h1:after{
     background: #ffa623;
     width: 100px;
     height: 4px;
     margin-bottom: 40px;
 }
 
-#donations h3, #adoption h3{
+#donation h3, #adoption h3{
     font-size: 2em;
     color: #3f3e3e;
     margin: 40px 0 20px 0;
@@ -81,7 +81,7 @@ TITULOS
 /*------------------------------------------- 
 PARAGRAFOS 
 -------------------------------------------*/
-#quem-somos p, #donations p, #adoption p, #last-dogs p, #contact p, #title p{
+#quem-somos p, #donation p, #adoption p, #last-dogs p, #contact p, #title p{
     color: #3f3e3e;
 }
 
@@ -89,17 +89,17 @@ PARAGRAFOS
  ALINHAMENTO 
 ------------------------------------------- */
 
-#donations .col-align, #adoption .col-align, #last-dogs .col-align, #contact-detail .col-align, #suggestion .col-align, #donations-page .col-align{
+#donation .col-align, #adoption .col-align, #last-dogs .col-align, #contact-detail .col-align, #suggestion .col-align, #donations-page .col-align{
     text-align: center;
 }
 
 @media screen and (min-width: 768px)
 {
-    #adoption .row .col-6{
+    #donation .row .col-6, #adoption .row .col-6{
         margin: 40px 20px;
     }
 
-    #donations .col-align, #adoption .col-align{
+    #donation .col-align, #adoption .col-align{
         text-align: left;
     }
 
@@ -111,7 +111,7 @@ PARAGRAFOS
 
 @media screen and (min-width: 1024px)
 {
-    #donations h3, #adoption h3{
+    #donation h3, #adoption h3{
         font-size: 3em;
     }
 }
