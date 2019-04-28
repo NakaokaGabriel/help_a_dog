@@ -44,7 +44,7 @@
         // MENU
         require('includes/menu.php');  
     ?>
-    <section id="donations">
+    <section id="donations-page">
         <div class="container">
             <form action="">
                 <div class="tips">
@@ -53,52 +53,52 @@
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="10"><span>R$</span> 10,00</label>
                                     <input type="radio" name="valor" id="10">
+                                    <label for="10"><span>R$</span> 10,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="20"><span>R$</span> 20,00</label>
                                     <input type="radio" name="valor" id="20">
+                                    <label for="20"><span>R$</span> 20,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="30"><span>R$</span> 30,00</label>
                                     <input type="radio" name="valor" id="30">
+                                    <label for="30"><span>R$</span> 30,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="40"><span>R$</span> 40,00</label>
                                     <input type="radio" name="valor" id="40">
+                                    <label for="40"><span>R$</span> 40,00</label>
                                 </div>
                             </div>
                         </div>                          
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="80"><span>R$</span> 80,00</label>
                                     <input type="radio" name="valor" id="80">
+                                    <label for="80"><span>R$</span> 80,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="90"><span>R$</span> 90,00</label>
                                     <input type="radio" name="valor" id="90">
+                                    <label for="90"><span>R$</span> 90,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="100"><span>R$</span> 100,00</label>
                                     <input type="radio" name="valor" id="100">
+                                    <label for="100"><span>R$</span> 100,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <label for="110"><span>R$</span> 110,00</label>
                                     <input type="radio" name="valor" id="110">
+                                    <label for="110"><span>R$</span> 110,00</label>
                                 </div>
                             </div>
                         </div>
@@ -111,11 +111,11 @@
                             </div>
                         </div>                         
                     </fieldset>
-                    <fieldset name="info-payments">
-                        <div class="tips-payments">
-                            <p>CARTÃO</p>
-                            <p>BOLETO</p>
-                        </div>
+                    <div class="tips-payments">
+                        <p>CARTÃO</p>
+                        <p>BOLETO</p>
+                    </div>
+                    <fieldset name="info-payments" class="info-payments">
                         <div class="money-info">
                             <p><span>2</span> Informações do pagamento</p>
                             <div class="row">
@@ -123,7 +123,7 @@
                                     <label for="numero">Número do cartão</label>
                                     <input type="text" name="numero">
                                 </div>
-                                <div class="data">
+                                <div class="col-4 data">
                                     <label for="data">Data de validade</label>
                                     <div class="row">
                                         <div class="col-2">
@@ -149,7 +149,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset name="personal-info">
+                    <fieldset name="personal-info" class="personal-info">
                         <p><span>3</span> Informações pessoais</p>
                         <div class="row">
                             <div class="col-6">

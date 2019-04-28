@@ -89,7 +89,7 @@ PARAGRAFOS
  ALINHAMENTO 
 ------------------------------------------- */
 
-#donations .col-align, #adoption .col-align, #last-dogs .col-align, #contact-detail .col-align, #suggestion .col-align{
+#donations .col-align, #adoption .col-align, #last-dogs .col-align, #contact-detail .col-align, #suggestion .col-align, #donations-page .col-align{
     text-align: center;
 }
 
@@ -124,18 +124,18 @@ FORMULARIOS
     margin: 0 25px 0 5px;
 }
 
-#contact .col-6, #contact-detail .col-6{
+#contact .col-6, #contact-detail .col-6, #donations-page .info-payments .col-6, #donations-page .personal-info .col-6{
     margin: 0 5px;
 }
 
-#contact label, #contact-detail  label{
+#contact label, #contact-detail label, #donations-page .info-payments label, #donations-page .personal-info label{
     display: block;
     color: #3f3e3e;
     font-size: 1.1em;
     margin: 10px 0;
 }
 
-#contact input, #contact-detail input{
+#contact input, #contact-detail input, #donations-page .info-payments input, #donations-page .personal-info input{
     border: 2px solid #3f3e3e;
     background: transparent;
     height: 30px;
@@ -441,7 +441,7 @@ LISTA
     text-transform: capitalize;
 }
 
-#last-dogs .row .col-align, #list-dogs .row .col-align, #suggestion .row .col-align{
+#last-dogs .row .col-align, #list-dogs .row .col-align, #suggestion .row .col-align, #donations  .col-align{
     margin-top: 40px;
 }
 
@@ -514,7 +514,7 @@ LISTA
 
 @media screen and (min-width: 768px)
 {
-    #last-dogs .row .col-align, #list-dogs .row .col-align{
+    #last-dogs .row .col-align, #list-dogs .row .col-align, #donations .row .col-align{
         display: block;
         width: 100%;
     }
@@ -856,16 +856,24 @@ SOBRE NÓS
     margin-top: 20px;
 }
 
-#donations .valors{
+/* -------------------------------------------
+DOAÇÕES
+------------------------------------------- */
+
+#donations-page{
+    padding-bottom: 40px;
+}
+
+#donations-page .valors, #donations-page .info-payments, #donations-page .personal-info{
     border-top: 1px solid #848383;
     padding: 30px 0;
 }
 
-#donations .valors p{
+#donations-page .valors p, #donations-page .info-payments p, #donations-page .personal-info p{
     margin-bottom: 40px;
 }
 
-#donations .valors p span{
+#donations-page .valors p span, #donations-page .info-payments p span, #donations-page .personal-info p span{
     background: #ffa623;
     color: #f7f0e0;
     padding: 6px 10px;
@@ -873,17 +881,59 @@ SOBRE NÓS
     margin-right: 5px;
 }
 
-#donations .valors .box input[type='radio']{
+#donations-page .valors .box input[type='radio']{
     visibility: hidden;
 }
 
-#donations .valors .box label{
-    border: 1px solid #ffa623;
+#donations-page .valors .box label{
+    border: 2px solid #ffa623;
     display: block;
     width: 100%;
-    height: 150px;
+    height: 110px;
+    position: relative;
+    color: #ffa623;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 70px;
+    font-family: 'Muli';
+    font-weight: bold;
+    cursor: pointer;
 }
 
-#donations .valors .box input[type="radio"]:checked + label {
+#donations-page .valors .box input[type="radio"]:checked + label {
     background: #ffa623;
+    color: #f7f0e0;
+}
+
+#donations-page .valors .box label span{
+    font-size: 0.4em;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+#donations-page .valores{
+    margin: 20px 5px;
+}
+
+#donations-page .valores label{
+    background: #ffa623;
+    padding: 10px;
+    color: #f7f0e0;
+    font-weight: bold;
+}
+
+#donations-page .valores input{
+    background: none;
+    border: 1px solid #ffa623;
+    padding: 10px;
+    position: relative;
+    left: -5px;
+    top: -1px;
+    width: 50px;
+}  
+
+#donations-page button{
+    background: #ffa623;
+    color: #f7f0e0;
 }
