@@ -53,52 +53,52 @@
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="10">
                                     <label for="10"><span>R$</span> 10,00</label>
+                                    <input type="radio" name="valor" id="10">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="20">
                                     <label for="20"><span>R$</span> 20,00</label>
+                                    <input type="radio" name="valor" id="20">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="30">
                                     <label for="30"><span>R$</span> 30,00</label>
+                                    <input type="radio" name="valor" id="30">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="40">
                                     <label for="40"><span>R$</span> 40,00</label>
+                                    <input type="radio" name="valor" id="40">
                                 </div>
                             </div>
                         </div>                          
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="80">
                                     <label for="80"><span>R$</span> 80,00</label>
+                                    <input type="radio" name="valor" id="80">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="90">
                                     <label for="90"><span>R$</span> 90,00</label>
+                                    <input type="radio" name="valor" id="90">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="100">
                                     <label for="100"><span>R$</span> 100,00</label>
+                                    <input type="radio" name="valor" id="100">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="110">
                                     <label for="110"><span>R$</span> 110,00</label>
+                                    <input type="radio" name="valor" id="110">
                                 </div>
                             </div>
                         </div>

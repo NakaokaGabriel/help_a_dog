@@ -665,7 +665,7 @@ PESQUISA E FILTRO
     visibility: hidden;
 }
 
-#filter input[type="radio"]:checked + label{
+#filter input[type="radio"]:checked + label, #donations input[type="radio"]:checked + label{
     background: #ffa623;
     color: #fffbf8;
 }
@@ -871,4 +871,19 @@ SOBRE NÓS
     padding: 6px 10px;
     border-radius: 1000px;
     margin-right: 5px;
+}
+
+#donations .valors .box input[type='radio']{
+    visibility: hidden;
+}
+
+#donations .valors .box label{
+    border: 1px solid #ffa623;
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+
+#donations .valors .box input[type="radio"]:checked + label {
+    background: #ffa623;
 }
