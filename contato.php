@@ -44,7 +44,7 @@
                     </ul>
                 </div>
                 <div class="col-6">
-                    <form action="">
+                    <form action="dev-email-enviar.php" method="post">
                         <label for="nome">Nome</label>
                         <input type="text" placeholder="Digite seu nome" name="nome">
                         <label for="nome">Sobrenome</label>
