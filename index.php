@@ -134,7 +134,7 @@
     <section id="contact">
         <div class="container">
             <h2>CONTATO</h2>
-            <form action="">
+            <form action="dev-contato.php" method="POST">
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
