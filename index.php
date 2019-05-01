@@ -34,7 +34,7 @@
                     <div class="content">
                         <h1>AJUDE QUEM <br>PRECISA!</h1>
                         <p>Ajude cães abandonados que nunca receberam carinho.</p>
-                        <a href="#quem-somos" class="button">SABER MAIS</a>
+                        <a href="#quem-somos" data-animacao class="button">SABER MAIS</a>
                     </div>
                 </div>
                 <div class="col-6">
