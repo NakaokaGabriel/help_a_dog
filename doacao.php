@@ -46,32 +46,32 @@
     ?>
     <section id="donations-page">
         <div class="container">
-            <form action="">
+            <form action="" name="doacao">
                 <div class="tips">
                     <fieldset name="valores" class="valors">
                         <p><span>1</span> Valores de pagamento</p>
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="10">
+                                    <input type="radio" name="valor" id="10" value="10,00">
                                     <label for="10"><span>R$</span> 10,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="20">
+                                    <input type="radio" name="valor" id="20" value="20,00">
                                     <label for="20"><span>R$</span> 20,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="30">
+                                    <input type="radio" name="valor" id="30" value="30,00">
                                     <label for="30"><span>R$</span> 30,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="40">
+                                    <input type="radio" name="valor" id="40" value="40,00">
                                     <label for="40"><span>R$</span> 40,00</label>
                                 </div>
                             </div>
@@ -79,25 +79,25 @@
                         <div class="row">
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="80">
+                                    <input type="radio" name="valor" id="80" value="80,00">
                                     <label for="80"><span>R$</span> 80,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="90">
+                                    <input type="radio" name="valor" id="90" value="90,00">
                                     <label for="90"><span>R$</span> 90,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="100">
+                                    <input type="radio" name="valor" id="100" value="100,00">
                                     <label for="100"><span>R$</span> 100,00</label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="box">
-                                    <input type="radio" name="valor" id="110">
+                                    <input type="radio" name="valor" id="110" value="110,00">
                                     <label for="110"><span>R$</span> 110,00</label>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="col-12">
                                 <div class="valores">
                                     <label for="valors">R$</label>
-                                    <input type="text">
+                                    <input type="text" disabled data-doacao>
                                 </div>
                             </div>
                         </div>                         
