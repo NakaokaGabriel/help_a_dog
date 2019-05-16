@@ -6,3 +6,5 @@
 <link rel="stylesheet" href="assets/css/grid.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon">
+<link rel="icon" href="./assets/images/icon.ico" type="image/x-icon">

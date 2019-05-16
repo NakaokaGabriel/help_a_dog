@@ -152,7 +152,7 @@
                     </div>
                     <div class="col-6">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" placeholder="Digite o numero de seu telefone" name="telefone">
+                        <input type="tel" placeholder="(xx) xxxxx-xxxx" id="telefone" maxlength="15" name="telefone">
                     </div>
                 </div>
                 <div class="row">

@@ -52,7 +52,7 @@
                         <label for="nome">E-mail</label>
                         <input type="email" placeholder="Digite seu e-mail" name="email">
                         <label for="nome">Telefone</label>
-                        <input type="text" placeholder="Digite seu telefone" name="telefone">
+                        <input type="text" placeholder="Digite seu telefone" id="telefone" name="telefone">
                         <label for="mensagem">Mensagem</label>
                         <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato"></textarea>
                         <div class="col-6 col-align">
