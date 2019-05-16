@@ -33,15 +33,24 @@ export default class MaskPhone
         if(this.validationForTheEvent(element.value))
         {
             element.value = this.formating(element.value);
+            element.removeAttribute('class');
+        }
+        else
+        {
+            element.value = this.formating(element.value);
+            element.classList.add('vermelho');
         }
     }
     // Evento que irá acionar o input
     // Evento ao digitar
     eventOnEnter(element)
     {
-        this.element.addEventListener('keyup', () => {
-            this.validationOfFormatation(this.element);
-        });
+        const events = ['keyup', 'change', 'keydown'];
+        events.forEach(event => {
+            this.element.addEventListener(event, () => {
+                this.validationOfFormatation(this.element);
+            });
+        })
     }
     init()
     {

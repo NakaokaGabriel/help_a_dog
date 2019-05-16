@@ -44,7 +44,7 @@
                     </ul>
                 </div>
                 <div class="col-6">
-                    <form action="dev-email-enviar.php" method="post">
+                    <form action="dev-contato.php" method="post">
                         <label for="nome">Nome</label>
                         <input type="text" placeholder="Digite seu nome" name="nome">
                         <label for="nome">Sobrenome</label>
@@ -52,7 +52,7 @@
                         <label for="nome">E-mail</label>
                         <input type="email" placeholder="Digite seu e-mail" name="email">
                         <label for="nome">Telefone</label>
-                        <input type="text" placeholder="Digite seu telefone" id="telefone" name="telefone">
+                        <input type="text" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
                         <label for="mensagem">Mensagem</label>
                         <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato"></textarea>
                         <div class="col-6 col-align">
