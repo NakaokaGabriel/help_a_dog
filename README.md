@@ -1,3 +1,6 @@
-# Site help a dog com o intuito de divulgar alguma instituição de caridade de cachorro
+# Help a Dog
 
-- Sistema em PHP 
+- Site help a dog com o intuito de divulgar alguma instituição de caridade de cachorro
+> Sistema em PHP
+
+[HelpaDog]('gabrielnakaoka.com')
