@@ -138,28 +138,28 @@
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
-                        <input type="text" placeholder="Digite seu nome" name="nome">
+                        <input type="text" required placeholder="Digite seu nome" name="nome">
                     </div>
                     <div class="col-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" placeholder="Digite seu sobrenome" name="sobrenome">
+                        <input type="text" required placeholder="Digite seu sobrenome" name="sobrenome">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <label for="email">E-mail</label>
-                        <input type="email" placeholder="Digite seu E-mail" name="email">
+                        <input type="email" required placeholder="Digite seu E-mail" name="email">
                     </div>
                     <div class="col-6">
                         <label for="telefone">Telefone ou Celular</label>
-                        <input type="tel" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
+                        <input type="tel" required placeholder="(DDD) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" placeholder="Digite alguma mensagem, para sabermos o que você necessita"></textarea>
-                    </div>
+                        <textarea name="mensagem" required placeholder="Digite alguma mensagem, para sabermos o que você necessita"></textarea>
+                    </div> 
                 </div>
                 <div class="row">
                     <div class="col-12">

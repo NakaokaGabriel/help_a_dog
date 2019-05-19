@@ -1,3 +1,4 @@
+// Mascara para telefone
 export default class MaskPhone
 {
     // Inicia um objeto construtor passando o parametro do elemento
