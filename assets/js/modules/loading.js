@@ -6,8 +6,7 @@ export default function initLoading()
     const loadingPag = (() => {
         setTimeout(() => {
             loading.removeAttribute('class');
-            body.style.overflow = 'initial'
-        }, 500);
+        }, 2000);
     });
     
     window.addEventListener('load', loadingPag);
