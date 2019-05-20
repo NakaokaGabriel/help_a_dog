@@ -4,10 +4,12 @@
 import initAnimaMenu from './modules/animaMenu.js';
 import initAtivaMenu from './modules/ativaMenu.js';
 import initScrollSuave from './modules/scroll-suave.js';
+import initLoading from './modules/loading.js';
 
 initAnimaMenu();
 initAtivaMenu();
 initScrollSuave();
+initLoading();
 
 // Classe para a utilização de mascara de telefone
 import MaskPhone from './modules/mascara.js';
@@ -20,11 +22,3 @@ if(selectIdCel)
 {
     const objectMask = new MaskPhone(selectIdCel).init();
 }
-
-// Importar o script mascara das doações
-import MaskMoney from './modules/mask-donation.js';
-
-// Seleciona o formulario de doação
-const formDonation = document.forms.doacao;
-
-console.log(formDonation);

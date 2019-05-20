@@ -329,6 +329,6 @@
         require('includes/footer.php');
     ?>
 
-    <script src="assets/js/style.js" type="module"></script>
+    <script src="assets/js/style-min.js"></script>
 </body>
 </html>
