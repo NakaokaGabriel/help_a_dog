@@ -1,19 +1,30 @@
-export default function initAnimaMenu()
+export default class AnimaMenu
 {
-    const $menu = document.querySelector('[data-menu="mainMenu"]');
-
-    function animaMenu(event)
+    constructor(menu)
     {
-        console.log();
+        this.menu = document.querySelector(menu);
+    }
+    animaMenu(event)
+    {
         if(event.currentTarget.pageYOffset > 10)
         {
-            $menu.classList.add('animaMenu');
+            this.menu.classList.add('animaMenu');
         }
         else
         {
-            $menu.classList.remove('animaMenu');
+            this.menu.classList.remove('animaMenu');
         }
     }
-
-    window.addEventListener('scroll', animaMenu);
+    eventScroll()
+    {
+        window.addEventListener('scroll', this.animaMenu);
+    }
+    init()
+    {
+        if (this.menu)
+        {
+            this.eventScroll();
+            return this;
+        }
+    }
 }

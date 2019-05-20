@@ -1,12 +1,13 @@
-'use strict';
+// Importações de classes que uso em todo o site
+import ScrollMenu from './modules/animaMenu.js';
 
-// Importações de funções que uso em todo o site
-import initAnimaMenu from './modules/animaMenu.js';
+const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
+scrollmenu.init();
+
 import initAtivaMenu from './modules/ativaMenu.js';
 import initScrollSuave from './modules/scroll-suave.js';
 import initLoading from './modules/loading.js';
 
-initAnimaMenu();
 initAtivaMenu();
 initScrollSuave();
 initLoading();
