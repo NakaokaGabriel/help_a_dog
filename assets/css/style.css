@@ -1,5 +1,37 @@
 /* RESET ALGUNS VALORES QUE SERÃO PADRÕES */
 
+/* LOADING DA PÁGINA */
+
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: #fff5ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .spinner{
+    display: block;
+    border: 10px solid rgb(0, 0, 0, 0.1);
+    border-right: 10px solid #ffa623;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    animation: carrega 0.8s linear infinite;
+}
+
+@keyframes carrega{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 /* -------------------------------------------
 BOTÕES 
 ------------------------------------------- */
@@ -236,7 +268,7 @@ MENU
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     transition: .2s linear;
 }
 
