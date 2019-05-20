@@ -1,19 +1,34 @@
 import cliqueFora from './outside.js';
 
-export default function initAtivaMenu()
+export default class AtivaMenu
 {
-    const $menuButton = document.querySelector('[data-menu="button"]');
-    const $menuList = document.querySelector('[data-menu="list"]');
-
-    $menuButton.addEventListener('click', ativaMenu);
-    
-    function ativaMenu()
+    constructor (button, list)
     {
-        $menuList.classList.toggle('activeMenu');
-        $menuButton.classList.toggle('activeIcon');
+        this.button = document.querySelector(button);
+        this.list = document.querySelector(list);
+    }
+    
+    activeMenu()
+    {
+        this.list.classList.toggle('activeMenu');
+        this.button.classList.toggle('activeIcon');
         cliqueFora(this, () => {
-            $menuList.classList.remove('activeMenu');
-            $menuButton.classList.remove('activeIcon');
+            this.list.classList.remove('activeMenu');
+            this.button.classList.remove('activeIcon');
         });
+    }
+
+    clickEvent()
+    {
+        this.button.addEventListener('click', () => this.activeMenu);
+    }
+
+    init()
+    {
+        if(this.list && this.button)
+        {
+            this.clickEvent();
+            return this; 
+        }
     }
 } 
