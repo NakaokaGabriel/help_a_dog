@@ -1,9 +1,11 @@
 // Importações de classes que uso em todo o site
 import ScrollMenu from './modules/animaMenu.js';
+
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
 scrollmenu.init();
 
 import AtivaMenu from './modules/ativaMenu.js';
+
 const ativamenu = new AtivaMenu('[data-menu="button"]', '[data-menu="list"]');
 ativamenu.init();
 

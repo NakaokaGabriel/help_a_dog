@@ -6,10 +6,13 @@ export default class AtivaMenu
     {
         this.button = document.querySelector(button);
         this.list = document.querySelector(list);
+
+        this.activeMenu = this.activeMenu.bind(this);
     }
     
     activeMenu()
     {
+        console.log(this);
         this.list.classList.toggle('activeMenu');
         this.button.classList.toggle('activeIcon');
         cliqueFora(this, () => {

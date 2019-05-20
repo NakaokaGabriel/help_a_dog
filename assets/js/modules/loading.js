@@ -6,7 +6,7 @@ export default function initLoading()
     const loadingPag = (() => {
         setTimeout(() => {
             loading.removeAttribute('class');
-        }, 2000);
+        }, 500);
     });
     
     window.addEventListener('load', loadingPag);
