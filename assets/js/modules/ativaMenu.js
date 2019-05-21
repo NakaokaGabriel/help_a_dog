@@ -28,7 +28,7 @@ export default class AtivaMenu
 
     init()
     {
-        if(this.list && this.button)
+        if (this.list && this.button)
         {
             this.clickEvent();
             return this; 
