@@ -12,18 +12,17 @@ export default class AtivaMenu
     
     activeMenu()
     {
-        console.log(this);
-        this.list.classList.toggle('activeMenu');
-        this.button.classList.toggle('activeIcon');
+        this.list.element.classList.toggle('activeMenu');
+        this.button.element.classList.toggle('activeIcon');
         cliqueFora(this, () => {
-            this.list.classList.remove('activeMenu');
-            this.button.classList.remove('activeIcon');
+            this.list.element.classList.remove('activeMenu');
+            this.button.element.classList.remove('activeIcon');
         });
     }
 
     clickEvent()
     {
-        this.button.addEventListener('click', () => this.activeMenu);
+        this.button.addEventListener('click', this.activeMenu);
     }
 
     init()
