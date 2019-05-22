@@ -10,13 +10,14 @@ export default class AtivaMenu
         this.activeMenu = this.activeMenu.bind(this);
     }
     
-    activeMenu()
+    activeMenu(event)
     {
-        this.list.element.classList.toggle('activeMenu');
-        this.button.element.classList.toggle('activeIcon');
-        cliqueFora(this, () => {
-            this.list.element.classList.remove('activeMenu');
-            this.button.element.classList.remove('activeIcon');
+        const element = event.currentTarget;
+        this.list.classList.toggle('activeMenu');
+        element.classList.toggle('activeIcon');
+        cliqueFora(element, () => {
+            this.list.classList.remove('activeMenu');
+            element.classList.remove('activeIcon');
         });
     }
 
@@ -30,7 +31,7 @@ export default class AtivaMenu
         if (this.list && this.button)
         {
             this.clickEvent();
-            return this; 
         }
+        return this; 
     }
 } 

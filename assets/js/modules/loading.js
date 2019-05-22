@@ -1,13 +1,32 @@
-export default function initLoading()
+export default class Loading
 {
-    const loading = document.querySelector('.loader');
-    const body = document.querySelector('body');
-    
-    const loadingPag = (() => {
+    constructor(loading, body)
+    {
+        this.loading = document.querySelector(loading);
+        this.body = document.querySelector(body);
+
+        this.loadingPag = this.loadingPag.bind(this);
+    }
+
+    // Definira quanto tempo para remover a classe do body
+    loadingPag()
+    {
         setTimeout(() => {
-            loading.removeAttribute('class');
+            this.loading.removeAttribute('class');
         }, 500);
-    });
+    }
+
+    eventLoad()
+    {
+        window.addEventListener('load', this.loadingPag);
+    }
     
-    window.addEventListener('load', loadingPag);
+    init()
+    {
+        if(this.loading && this.body)
+        {
+            this.eventLoad();
+            return(this);
+        }
+    }
 }

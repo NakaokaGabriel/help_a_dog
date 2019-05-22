@@ -1,22 +1,39 @@
-export default function initScrollSuave()
-{
-      const button = document.querySelector('[data-animacao]');
-
-      if(button)
+export default class ScrollSuave
+{     
+      constructor(button, attribute, selectAttribute, options)
       {
-            function animaScroll(event)
+            this.button = document.querySelector(button);
+            this.attribute = this.button.getAttribute(attribute) || this.button.getAttribute('href');
+            this.selectAttribute = document.querySelector(this.attribute);
+            const calculoTop = window.innerHeight * 0.1;
+            const topo = this.selectAttribute.offsetTop - calculoTop;
+
+            if(options === undefined)
             {
-                  event.preventDefault();
-                  const atributoBotao = button.getAttribute('href');
-                  const selecionaAtributo = document.querySelector(atributoBotao);
-                  const calculoTop = window.innerHeight * 0.1;
-            
-                  const topo = selecionaAtributo.offsetTop - calculoTop;
-                  window.scrollTo({
-                        behavior: 'smooth',
-                        top: topo
-                  });
+                  this.options = {behavior: 'smooth', top: topo}
             }
-            button.addEventListener('click', animaScroll);
+            else
+            {
+                  this.options = options                  
+            }
+
+            this.animaScroll = this.animaScroll.bind(this);
+      }
+
+      animaScroll(event)
+      {
+            event.preventDefault();
+            window.scrollTo(this.options);
+      }
+
+      eventScroll()
+      {
+            this.button.addEventListener('click', this.animaScroll);
+      }
+      
+      init()
+      {
+            this.eventScroll();
+            return this;
       }
 }
