@@ -138,31 +138,36 @@
     <section id="contact">
         <div class="container">
             <h2>CONTATO</h2>
-            <form action="dev-contato.php" method="POST">
+            <form action="dev-contato.php" method="POST" id="contato">
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
                         <input type="text" required placeholder="Digite seu nome" name="nome">
+                        <span class="erro"></span>
                     </div>
                     <div class="col-6">
                         <label for="sobrenome">Sobrenome</label>
                         <input type="text" required placeholder="Digite seu sobrenome" name="sobrenome">
+                        <span class="erro"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <label for="email">E-mail</label>
                         <input type="email" required placeholder="Digite seu E-mail" name="email">
+                        <span class="erro"></span>
                     </div>
                     <div class="col-6">
                         <label for="telefone">Telefone ou Celular</label>
                         <input type="tel" required placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
+                        <span class="erro"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <label for="mensagem">Mensagem</label>
                         <textarea name="mensagem" required placeholder="Digite alguma mensagem, para sabermos o que você necessita"></textarea>
+                        <span class="erro"></span>
                     </div> 
                 </div>
                 <div class="row">

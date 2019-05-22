@@ -6,6 +6,7 @@ import ScrollSuave from './modules/scroll-suave.js';
 import Loading from './modules/loading.js';
 import MaskPhone from './modules/mascara.js';
 import AtivaMenu from './modules/ativaMenu.js';
+import ValidaForms from './modules/valida-forms.js';
 
 // Evento de animação ao menu ao dar scroll
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
@@ -27,3 +28,7 @@ objectMask.init();
 // Evento para ativar animação do menu
 const ativaMenu = new AtivaMenu('[data-menu="button"]', '[data-menu="list"]');
 ativaMenu.init();
+
+// Estilização de validação de formulario
+const validaForms = new ValidaForms('#contato');
+validaForms.init();
