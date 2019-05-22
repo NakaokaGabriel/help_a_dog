@@ -4,12 +4,15 @@ import ScrollMenu from './modules/animaMenu.js';
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
 scrollmenu.init();
 
+import ScrollSuave from './modules/scroll-suave.js';
+
+const scrollsuave = new ScrollSuave('[data-animacao]', );
+scrollsuave.init();
+
 import initAtivaMenu from './modules/ativaMenu.js';
-import initScrollSuave from './modules/scroll-suave.js';
 import initLoading from './modules/loading.js';
 
 initAtivaMenu();
-initScrollSuave();
 initLoading();
 
 // Classe para a utilização de mascara de telefone
