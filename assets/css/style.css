@@ -189,6 +189,16 @@ FORMULARIOS
     color: #f7f0e0;
 }
 
+#contact input.invalido, #contact .invalido{
+    border-color: #f56e6e;
+}
+
+#contact span{
+    display: block;
+    margin: 10px 0;
+    color: #f56e6e;
+}
+
 @media screen and (min-width: 1440px)
 {
     #contact .col-12, #contact-detail .col-12{
