@@ -24,7 +24,6 @@ import MaskPhone from './modules/mascara.js';
 const objectMask = new MaskPhone('#telefone');
 objectMask.init();
 
-// ------------------------------------------------- //
-import initAtivaMenu from './modules/ativaMenu.js';
-initAtivaMenu();
-// ------------------------------------------------- //
+import AtivaMenu from './modules/ativaMenu.js';
+const ativaMenu = new AtivaMenu('[data-menu="button"]', '[data-menu="list"]');
+ativaMenu.init();
