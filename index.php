@@ -156,7 +156,7 @@
                     </div>
                     <div class="col-6">
                         <label for="telefone">Telefone ou Celular</label>
-                        <input type="tel" required placeholder="(DDD) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
+                        <input type="tel" required placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
                     </div>
                 </div>
                 <div class="row">

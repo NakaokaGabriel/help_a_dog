@@ -1,31 +1,27 @@
 export default class ScrollSuave
 {     
-      constructor(button, attribute, selectAttribute, options)
+      constructor(button)
       {
             this.button = document.querySelector(button);
-            this.attribute = this.button.getAttribute(attribute) || this.button.getAttribute('href');
-            this.selectAttribute = document.querySelector(this.attribute);
-            const calculoTop = window.innerHeight * 0.1;
-            const topo = this.selectAttribute.offsetTop - calculoTop;
-
-            if(options === undefined)
-            {
-                  this.options = {behavior: 'smooth', top: topo}
-            }
-            else
-            {
-                  this.options = options                  
-            }
 
             this.animaScroll = this.animaScroll.bind(this);
       }
 
+      // Evento que previni o padrão do scroll e ainda da um scroll mais suave para o elemento do botão
       animaScroll(event)
       {
             event.preventDefault();
-            window.scrollTo(this.options);
+            const attribute = this.button.getAttribute('href');
+            const selectAttribute = document.querySelector(attribute);
+            const calculoTop = window.innerHeight * 0.1;
+            const topo = selectAttribute.offsetTop - calculoTop;
+            window.scrollTo({
+                  behavior: 'smooth', 
+                  top: topo,
+            });
       }
 
+      // inicia o evento de scroll ao clickar no botão
       eventScroll()
       {
             this.button.addEventListener('click', this.animaScroll);
@@ -33,7 +29,10 @@ export default class ScrollSuave
       
       init()
       {
-            this.eventScroll();
+            if (this.button)
+            {
+                  this.eventScroll();
+            }
             return this;
       }
 }
