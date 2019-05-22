@@ -4,7 +4,7 @@ export default class MaskPhone
     // Inicia um objeto construtor passando o parametro do elemento
     constructor(element)
     {
-        this.element = element;
+        this.element = document.querySelector(element);
     }
     // Limpa qualquer retorno indevido para a mascara de telefone
     clear(cellNumber)
@@ -55,7 +55,10 @@ export default class MaskPhone
     }
     init()
     {
-        this.eventOnEnter();
-        return this;
+        if(this.element)
+        {
+            this.eventOnEnter();
+            return this;
+        }
     }
 }

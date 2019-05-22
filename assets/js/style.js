@@ -18,11 +18,5 @@ initLoading();
 // Classe para a utilização de mascara de telefone
 import MaskPhone from './modules/mascara.js';
 
-// Seleciona todos os inputs que estiverem o ID de telefone
-// Inicia um object constructor 
-const selectIdCel = document.getElementById('telefone');
-// Verifica se todos elementos com o id de telefone existir inicia a constructor function se não nao exibi o erro.
-if(selectIdCel)
-{
-    const objectMask = new MaskPhone(selectIdCel).init();
-}
+const objectMask = new MaskPhone('#telefone');
+objectMask.init();
