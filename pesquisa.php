@@ -55,6 +55,9 @@
     <meta name="robots" content="index, follow">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
     <header id="title">
         <div class="container">
             <h1><?= (($iQtdsPesquisa > 0) ? 'Resultados da pesquisa: '.$_GET['p'].' ( '.$iQtdsPesquisa.' )' : 'Nenhum resultado encontrado') ?></h1>

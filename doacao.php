@@ -26,6 +26,9 @@
     <meta name="robots" content="index, follow">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
     <header id="title">
         <div class="container">
             <h1>DOAÇÕES</h1>

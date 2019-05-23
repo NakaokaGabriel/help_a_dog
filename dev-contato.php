@@ -24,6 +24,9 @@
                   ':sMensagem' => $sMensagem,
                   ':dDataEnvio' => date('Y/m/d H:i:s'),
             ]);
+            $jsonResposta = array('Resposta' => 'ok');
+            echo json_encode($jsonResposta);
+            exit;
       }
       else
       {

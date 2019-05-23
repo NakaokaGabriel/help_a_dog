@@ -7,6 +7,7 @@ export default class ValidaForms{
         this.validaFormulario = this.validaFormulario.bind(this);
     }
 
+    // Pega onde o usuário esta digitando para fazer a validação
     validaFormulario(event)
     {
         const target = event.target;
@@ -22,6 +23,7 @@ export default class ValidaForms{
         }
     }
 
+    // adiciona os eventos passados por um array
     eventValidation()
     {
         this.events.forEach((events) => {

@@ -7,6 +7,7 @@ import Loading from './modules/loading.js';
 import MaskPhone from './modules/mascara.js';
 import AtivaMenu from './modules/ativaMenu.js';
 import ValidaForms from './modules/valida-forms.js';
+import FetchContato from './modules/fetch-contato.js';
 
 // Evento de animação ao menu ao dar scroll
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
@@ -32,3 +33,7 @@ ativaMenu.init();
 // Estilização de validação de formulario
 const validaForms = new ValidaForms('#contato');
 validaForms.init();
+
+// Envia formulario de contato sem refresh
+const fetchContato = new FetchContato("#contato", 'dev-contato.php');
+fetchContato.init();

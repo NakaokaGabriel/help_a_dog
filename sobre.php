@@ -20,6 +20,9 @@
     <meta name="robots" content="index, follow">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
     <?php
         // MENU
         require('includes/menu.php');  

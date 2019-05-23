@@ -41,6 +41,9 @@
     <meta name="robots" content="index, follow">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
     <header id="tittle-dog">
         <div class="container">
             <h1><?= $oDadosAtuais['nome'] ?></h1>
@@ -81,31 +84,36 @@
         <div class="container">
             <h2>Gostou <?= (($oDadosAtuais['genero'] == 'Macho' OR $oDadosAtuais['genero'] == 'macho') ? 'do '.$oDadosAtuais['nome'].'' :  'da '.$oDadosAtuais['nome'].'') ?> ?</h2>
             <p>Entre em contato para adotár</p>
-            <form action="">
+            <form action="cu.php" method="post" id="contato">
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
-                        <input type="text" placeholder="Digite seu nome" name="nome">
+                        <input type="text" placeholder="Digite seu nome" name="nome" required>
+                        <span class="erro"></span>
                     </div>
                     <div class="col-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" placeholder="Digite seu sobrenome" name="sobrenome">
+                        <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" required>
+                        <span class="erro"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <label for="email">E-mail</label>
-                        <input type="email" placeholder="Digite seu E-mail" name="email">
+                        <input type="email" placeholder="Digite seu E-mail" name="email" required>
+                        <span class="erro"></span>
                     </div>
                     <div class="col-6">
                         <label for="telefone">Telefone ou Celular</label>
-                        <input type="tel" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
+                        <input type="tel" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone" required>
+                        <span class="erro"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato"></textarea>
+                        <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato" required></textarea>
+                        <span class="erro"></span>
                     </div>
                 </div>
                 <div class="row">
