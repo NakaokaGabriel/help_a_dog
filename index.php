@@ -30,7 +30,6 @@
     <div class="loader">
         <div class="spinner"></div>
     </div>
-
     <header id="header">
         <div class="container">
             <div class="row">
@@ -138,7 +137,7 @@
     <section id="contact">
         <div class="container">
             <h2>CONTATO</h2>
-            <form action="dev-contato.php" method="POST" id="contato">
+            <form method="POST" name="contato" id="contato">
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
@@ -172,7 +171,8 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button class="button">ENVIAR</button>
+                        <button class="button" name="button">ENVIAR</button>
+                        <span class="msg-enviada"></span>
                     </div>
                 </div>
             </form>

@@ -20,6 +20,9 @@
     <meta name="robots" content="index, follow">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
     <header id="title">
         <div class="container">
             <h1>CONTATO</h1>
@@ -44,19 +47,25 @@
                     </ul>
                 </div>
                 <div class="col-6">
-                    <form action="dev-contato.php" method="post">
+                    <form action="dev-contato.php" method="post" id="contato">
                         <label for="nome">Nome</label>
-                        <input type="text" placeholder="Digite seu nome" name="nome">
+                        <input type="text" placeholder="Digite seu nome" name="nome" required>
+                        <span class="erro"></span>
                         <label for="nome">Sobrenome</label>
-                        <input type="text" placeholder="Digite seu sobrenome" name="sobrenome">
+                        <input type="text" placeholder="Digite seu sobrenome" name="sobrenome" required>
+                        <span class="erro"></span>
                         <label for="nome">E-mail</label>
-                        <input type="email" placeholder="Digite seu e-mail" name="email">
+                        <input type="email" placeholder="Digite seu e-mail" name="email" required>
+                        <span class="erro"></span>
                         <label for="nome">Telefone</label>
-                        <input type="text" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone">
+                        <input type="text" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone" required>
+                        <span class="erro"></span>
                         <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato"></textarea>
+                        <textarea name="mensagem" placeholder="Nos mande uma mensagem para entrarmos em contato" required></textarea>
+                        <span class="erro"></span>
                         <div class="col-6 col-align">
-                            <button class="button">ENVIAR</button>
+                            <button class="button" name="button">ENVIAR</button>
+                            <span class="msg-enviada"></span>
                         </div>
                     </form>
                 </div>
