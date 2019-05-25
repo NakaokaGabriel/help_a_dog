@@ -20,13 +20,15 @@
 
     if($bAtivaServer)
     {
-        define('HOST', 'helpadog');
-        define('BANCO', 'help_a_dog');
-        define('USUARIO', 'helpadog');
-        define('SENHA', 'algumacoisa');
+        // DADOS SERVIDOR ONLINE
+        define('HOST', 'mysql.hostinger.com');
+        define('BANCO', 'u867974294_help');
+        define('USUARIO', 'u867974294_dog');
+        define('SENHA', 'gabriel');
     }
     else
     {
+        // DADOS SERVIDOR LOCAL DO COMPUTADOR
         define('HOST', 'localhost');
         define('BANCO', 'help_a_dog');
         define('USUARIO', 'root');

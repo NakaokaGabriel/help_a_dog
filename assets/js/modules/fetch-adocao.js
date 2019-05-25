@@ -1,9 +1,9 @@
-export default class FetchContato{
+export default class FetchAdocao{
     constructor(formulario, url)
     {
         this.formulario = document.querySelector(formulario);
         this.url = url;
-        this.msg = document.querySelector('.msg-enviada')
+        this.msg = document.querySelector('.msg-enviada');
 
         this.fetchForm = this.fetchForm.bind(this);
     }

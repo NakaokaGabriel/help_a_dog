@@ -84,7 +84,7 @@
         <div class="container">
             <h2>Gostou <?= (($oDadosAtuais['genero'] == 'Macho' OR $oDadosAtuais['genero'] == 'macho') ? 'do '.$oDadosAtuais['nome'].'' :  'da '.$oDadosAtuais['nome'].'') ?> ?</h2>
             <p>Entre em contato para adotár</p>
-            <form action="cu.php" method="post" id="contato">
+            <form id="adocao" name="adocao" method="POST">
                 <div class="row">
                     <div class="col-6">
                         <label for="nome">Nome</label>
@@ -118,7 +118,8 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-align">
-                        <button class="button">ENVIAR</button>
+                        <button class="button" name="button">ENVIAR</button>
+                        <span class="msg-enviada"></span>
                     </div>
                 </div>
             </form>
