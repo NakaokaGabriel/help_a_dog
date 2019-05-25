@@ -8,6 +8,7 @@ import MaskPhone from './modules/mascara.js';
 import AtivaMenu from './modules/ativaMenu.js';
 import ValidaForms from './modules/valida-forms.js';
 import FetchContato from './modules/fetch-contato.js';
+import FetchAdocao from './modules/fetch-adocao.js';
 
 // Evento de animação ao menu ao dar scroll
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
@@ -37,3 +38,7 @@ validaForms.init();
 // Envia formulario de contato sem refresh
 const fetchContato = new FetchContato("#contato", 'dev-contato.php');
 fetchContato.init();
+
+// Envia formulario de Adoção sem refresh
+const fetchAdocao = new FetchAdocao("#adocao", 'dev-adocao.php');
+fetchAdocao.init();
