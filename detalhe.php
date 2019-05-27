@@ -8,7 +8,27 @@
     $url = $_GET['url'];
 
     // SELECIONA A URL ATUAL QUE ESTA NA PÁGINA
-    $oCachorroAtual = $conn->prepare('CALL cachorroAtual(:tUrlAtual)');
+    $oCachorroAtual = $conn->prepare('
+    SELECT
+    cachorros.id,
+    cachorros.imagem,
+    cachorros.url,
+    cachorros.nome,
+    cachorros.genero,
+    cachorros.porte,
+    cachorros.idade,
+    cachorros.estado_fisico,
+    cachorros.saude,
+    cachorros.disponibilidade,
+    cachorros.descricao,
+    cachorros.data_publicacao
+    FROM
+        cachorros
+    WHERE
+        (cachorros.disponibilidade <> 0 OR cachorros.disponibilidade IS NOT NULL)
+    AND 
+        cachorros.url = :tUrlAtual
+    ');
     $oCachorroAtual->execute([':tUrlAtual' => $url]);
     $oDadosAtuais = $oCachorroAtual->fetch(PDO::FETCH_ASSOC);
     $oCachorroAtual->closeCursor();

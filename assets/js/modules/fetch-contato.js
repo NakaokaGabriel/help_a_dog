@@ -21,7 +21,7 @@ export default class FetchContato{
         }
         fetch(this.url, metodos)
         .then((response) => response.json())
-        .then((body) => {
+        .then((body) => {            
             if (body.Resposta === 'ok')
             {
                 this.formulario.button.classList.add('loading-button');                        
@@ -37,7 +37,7 @@ export default class FetchContato{
                 this.msg.innerText = 'Mensagem Enviada com sucesso.';
                 setTimeout(() => {
                     this.msg.innerText = '';
-                }, 10000)
+                }, 5000)
             }, 3000);
         })
         .catch((error) => {

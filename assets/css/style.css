@@ -996,6 +996,29 @@ DOAÇÕES
     width: 50px;
 }  
 
+#donations-page .tips-payments p{
+    display: inline-block;
+    background: #ffa623;
+    padding: 15px 20px;
+    color: #f7f0e0;
+    position: relative;
+}
+
+#donations-page .tips-payments p.active:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #ffa623;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+}
+
 #donations-page button{
     background: #ffa623;
     color: #f7f0e0;
