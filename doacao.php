@@ -115,11 +115,11 @@
                         </div>                         
                     </fieldset>
                     <div class="tips-payments">
-                        <p>CARTÃO</p>
-                        <p>BOLETO</p>
+                        <p class="active">Cartão de credito</p>
+                        <p>Boleto</p>
                     </div>
                     <fieldset name="info-payments" class="info-payments">
-                        <div class="money-info">
+                        <div class="cart">
                             <p><span>2</span> Informações do pagamento</p>
                             <div class="row">
                                 <div class="col-8">
@@ -171,7 +171,7 @@
                             </div>
                             <div class="col-6">
                                 <label for="telefone">Telefone</label>
-                                <input type="tel" name="telefone" placeholder="(11) 99999-9999">
+                                <input type="text" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone" required>
                             </div>
                         </div>
                     </fieldset>
