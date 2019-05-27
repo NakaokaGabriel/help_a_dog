@@ -2,7 +2,7 @@ export default class ValidaForms{
     constructor(formulario)
     {
         this.formulario = document.querySelector(formulario);
-        this.events = ['keyup', 'change'];
+        this.events = ['change'];
 
         this.validaFormulario = this.validaFormulario.bind(this);
     }
