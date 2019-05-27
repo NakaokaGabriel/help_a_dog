@@ -3,7 +3,7 @@ export default class FetchContato{
     {
         this.formulario = document.querySelector(formulario);
         this.url = url;
-        this.msg = document.querySelector('.msg-enviada')
+        this.msg = document.querySelector('.msg-enviada');
 
         this.fetchForm = this.fetchForm.bind(this);
     }
@@ -37,7 +37,7 @@ export default class FetchContato{
                 this.msg.innerText = 'Mensagem Enviada com sucesso.';
                 setTimeout(() => {
                     this.msg.innerText = '';
-                }, 5000)
+                }, 10000)
             }, 3000);
         })
         .catch((error) => {
@@ -60,4 +60,4 @@ export default class FetchContato{
         return this;
     }
 
-}
+} 
