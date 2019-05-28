@@ -996,6 +996,14 @@ DOAÇÕES
     width: 50px;
 }  
 
+#donations-page .valores .enable-button{
+    background: #ffa623;
+    padding: 10px 15px;
+    color: #f7f0e0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 #donations-page .tips-payments p{
     display: inline-block;
     background: #ffa623;

@@ -9,6 +9,8 @@ import AtivaMenu from './modules/ativaMenu.js';
 import ValidaForms from './modules/valida-forms.js';
 import FetchContato from './modules/fetch-contato.js';
 import FetchAdocao from './modules/fetch-adocao.js';
+import initValidaDoacao from './modules/valida-doacao.js';
+// import initPagseguro from './modules/api-pagseguro.js';
 
 // Evento de animação ao menu ao dar scroll
 const scrollmenu = new ScrollMenu('[data-menu="mainMenu"]');
@@ -42,3 +44,9 @@ fetchContato.init();
 // Envia formulario de Adoção sem refresh
 const fetchAdocao = new FetchAdocao("#adocao", 'dev-adocao.php');
 fetchAdocao.init();
+
+// // API do pag seguro
+// initPagseguro();
+
+// VALIDAÇÃO DOS CAMPOS DE DOAÇÃO
+initValidaDoacao();

@@ -12,7 +12,7 @@ export default class Loading
     loadingPag()
     {
         setTimeout(() => {
-            this.loading.removeAttribute('class');
+            this.loading.remove();
         }, 500);
     }
 
