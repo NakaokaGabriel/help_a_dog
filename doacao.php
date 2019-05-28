@@ -49,7 +49,7 @@
     ?>
     <section id="donations-page">
         <div class="container">
-            <form action="" name="doacao">
+            <form name="doacao">
                 <div class="tips">
                     <fieldset name="valores" class="valors">
                         <p><span>1</span> Valores de pagamento</p>
@@ -109,7 +109,7 @@
                             <div class="col-12">
                                 <div class="valores">
                                     <label for="valors">R$</label>
-                                    <input type="text" disabled data-doacao>
+                                    <input type="text" class="money">
                                 </div>
                             </div>
                         </div>                         
@@ -124,23 +124,21 @@
                             <div class="row">
                                 <div class="col-8">
                                     <label for="numero">Número do cartão</label>
-                                    <input type="text" name="numero">
+                                    <input type="text" name="numero" placeholder="xxxx xxxx xxxx xxxx">
                                 </div>
-                                <div class="col-4 data">
-                                    <label for="data">Data de validade</label>
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <input type="text" name="ano">
-                                        </div>
-                                        <div class="col-2">
-                                            <input type="text" name="mes">
-                                        </div>
+                                <div class="col-1">
+                                    <label for="numero">CVV</label>
+                                    <input type="text" name="numero" maxlength="3" placeholder="xxx">
+                                </div>
+                                <div class="col-3">
+                                    <div class="band-cart">
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-8">
-                                    <label for="nome">Nome do dono do cartão</label>
+                                    <label for="nome">Nome do titular</label>
                                     <input type="text" name="nome">
                                 </div>
                                 <div class="row">
@@ -190,5 +188,6 @@
     ?>
 
     <script src="assets/js/style-min.js"></script>
+    <script type="text/javascript" src="<?= JS_PAGSEGURO; ?>"></script>
 </body>
 </html>
