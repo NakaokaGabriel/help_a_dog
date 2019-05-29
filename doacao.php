@@ -124,28 +124,22 @@
                             <div class="row">
                                 <div class="col-8">
                                     <label for="numero">Número do cartão</label>
-                                    <input type="text" name="numero" placeholder="xxxx xxxx xxxx xxxx">
+                                    <input type="text" name="numero" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="cartao">
                                 </div>
                                 <div class="col-1">
                                     <label for="numero">CVV</label>
                                     <input type="text" name="numero" maxlength="3" placeholder="xxx">
                                 </div>
                                 <div class="col-3">
-                                    <div class="band-cart">
+                                    <div class="brand-cart">
                                         
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-12">
                                     <label for="nome">Nome do titular</label>
-                                    <input type="text" name="nome">
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label for="data">Código de segurança</label>
-                                        <input type="text" name="codigo">
-                                    </div>
+                                    <input type="text" name="nome" placeholder="Digite o nome completo">
                                 </div>
                             </div>
                         </div>

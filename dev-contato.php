@@ -36,63 +36,63 @@
                   ':dDataEnvio'     => $dataEnvio,
             ]);
 
-            $tabelaEmail = '
-                  <table border="0" cellspacing="0">
-                        <tr>
-                              <th colspan="2" style="padding: 10px; color: #ffa623; text-align: center; font-size: 2em; border: 1px solid #ffa623;">Help a Dog - Contato</th>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Nome: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sNome.'</td>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Sobrenome: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sSobrenome.'</td>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">E-mail: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sEmail.'</td>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Telefone: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sTelefone.'</td>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Mensagem: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sMensagem.'</td>
-                        </tr>
-                        <tr>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Data Envio: </td>
-                              <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.date('d/m/Y H:i:s', strtotime($dataEnvio)).'</td>
-                        </tr>
-                  </table>
-            ';
+            // $tabelaEmail = '
+            //       <table border="0" cellspacing="0">
+            //             <tr>
+            //                   <th colspan="2" style="padding: 10px; color: #ffa623; text-align: center; font-size: 2em; border: 1px solid #ffa623;">Help a Dog - Contato</th>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Nome: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sNome.'</td>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Sobrenome: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sSobrenome.'</td>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">E-mail: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sEmail.'</td>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Telefone: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sTelefone.'</td>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Mensagem: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.$sMensagem.'</td>
+            //             </tr>
+            //             <tr>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;border-left: 1px solid #ffa623;">Data Envio: </td>
+            //                   <td style="padding: 10px; border-right: 1px solid #ffa623;border-bottom: 1px solid #ffa623;">'.date('d/m/Y H:i:s', strtotime($dataEnvio)).'</td>
+            //             </tr>
+            //       </table>
+            // ';
 
 
-            try {
-                  $mail->SMTPDebug = 0;
-                  $mail->isSMTP();
-                  $mail->Host       = 'smtp.hostinger.com.br';
-                  $mail->SMTPAuth   = true;
-                  $mail->Username   = 'contato@gabrielnakaoka.com';
-                  $mail->Password   = 'gabriel';
-                  $mail->SMTPSecure = 'tls';                                 
-                  $mail->Port       = 587;
+            // try {
+            //       $mail->SMTPDebug = 0;
+            //       $mail->isSMTP();
+            //       $mail->Host       = 'smtp.hostinger.com.br';
+            //       $mail->SMTPAuth   = true;
+            //       $mail->Username   = 'contato@gabrielnakaoka.com';
+            //       $mail->Password   = 'gabriel';
+            //       $mail->SMTPSecure = 'tls';                                 
+            //       $mail->Port       = 587;
               
-                  //Recipients
-                  $mail->setFrom('contato@gabrielnakaoka.com', 'Gabriel');
-                  $mail->addAddress('contato@gabrielnakaoka.com', 'help_a_dog');
+            //       //Recipients
+            //       $mail->setFrom('contato@gabrielnakaoka.com', 'Gabriel');
+            //       $mail->addAddress('contato@gabrielnakaoka.com', 'help_a_dog');
               
-                  // Content
-                  $mail->isHTML(true);
-                  $mail->Subject = 'Contato HelpAdog';
-                  $mail->Body    = $tabelaEmail;
-                  $mail->AltBody = 'Nome: '.$sNome.', Sobrenome: '.$sSobrenome.', E-mail: '.$sEmail.', Telefone: '.$sTelefone.', Mensagem: '.$sMensagem.', Data envio: '.$dataEnvio.'';
+            //       // Content
+            //       $mail->isHTML(true);
+            //       $mail->Subject = 'Contato HelpAdog';
+            //       $mail->Body    = $tabelaEmail;
+            //       $mail->AltBody = 'Nome: '.$sNome.', Sobrenome: '.$sSobrenome.', E-mail: '.$sEmail.', Telefone: '.$sTelefone.', Mensagem: '.$sMensagem.', Data envio: '.$dataEnvio.'';
               
-                  $mail->send();
-              } catch (Exception $e) {
-                  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-              }
+            //       $mail->send();
+            //   } catch (Exception $e) {
+            //       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            //   }
               
             $jsonResposta = array('Resposta' => 'ok');
             echo json_encode($jsonResposta);
