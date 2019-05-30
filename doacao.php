@@ -49,71 +49,71 @@
     ?>
     <section id="donations-page">
         <div class="container">
+        <div class="valors">
+            <p><span>1</span> Valores de pagamento</p>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="10" value="10,00">
+                            <label for="10"><span>R$</span> 10,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="20" value="20,00">
+                            <label for="20"><span>R$</span> 20,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="30" value="30,00">
+                            <label for="30"><span>R$</span> 30,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="40" value="40,00">
+                            <label for="40"><span>R$</span> 40,00</label>
+                        </div>
+                    </div>
+                </div>                          
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="80" value="80,00">
+                            <label for="80"><span>R$</span> 80,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="90" value="90,00">
+                            <label for="90"><span>R$</span> 90,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="100" value="100,00">
+                            <label for="100"><span>R$</span> 100,00</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <input type="radio" name="valor" id="110" value="110,00">
+                            <label for="110"><span>R$</span> 110,00</label>
+                        </div>
+                    </div>
+                </div>
+        </div>
             <form name="doacao">
                 <div class="tips">
-                    <fieldset name="valores" class="valors">
-                        <p><span>1</span> Valores de pagamento</p>
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="10" value="10,00">
-                                    <label for="10"><span>R$</span> 10,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="20" value="20,00">
-                                    <label for="20"><span>R$</span> 20,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="30" value="30,00">
-                                    <label for="30"><span>R$</span> 30,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="40" value="40,00">
-                                    <label for="40"><span>R$</span> 40,00</label>
-                                </div>
-                            </div>
-                        </div>                          
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="80" value="80,00">
-                                    <label for="80"><span>R$</span> 80,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="90" value="90,00">
-                                    <label for="90"><span>R$</span> 90,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="100" value="100,00">
-                                    <label for="100"><span>R$</span> 100,00</label>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="box">
-                                    <input type="radio" name="valor" id="110" value="110,00">
-                                    <label for="110"><span>R$</span> 110,00</label>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="valores">
+                                <label for="valors">R$</label>
+                                <input type="text" name="price" class="money">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="valores">
-                                    <label for="valors">R$</label>
-                                    <input type="text" class="money">
-                                </div>
-                            </div>
-                        </div>                         
-                    </fieldset>
+                    </div>                         
                     <div class="tips-payments">
                         <p class="active">Cartão de credito</p>
                         <p>Boleto</p>
@@ -124,22 +124,37 @@
                             <div class="row">
                                 <div class="col-8">
                                     <label for="numero">Número do cartão</label>
-                                    <input type="text" name="numero" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="cartao">
+                                    <input type="text" name="numeroCartao" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="cartao">
                                 </div>
-                                <div class="col-1">
+                                <div class="col-2">
                                     <label for="numero">CVV</label>
-                                    <input type="text" name="numero" maxlength="3" placeholder="xxx">
+                                    <input type="text" name="cvv" maxlength="3" placeholder="xxx">
                                 </div>
-                                <div class="col-3">
-                                    <div class="brand-cart">
-                                        
-                                    </div>
+                                <div class="col-2">
+                                    <label for="numero">Bandeira</label>
+                                    <select name="bandeiras" id="bandeiras">
+                                        <option value="" selected disabled>Bandeiras</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-8">
                                     <label for="nome">Nome do titular</label>
-                                    <input type="text" name="nome" placeholder="Digite o nome completo">
+                                    <input type="text" name="titular" placeholder="Digite o nome completo">
+                                </div>
+                                <div class="col-2">
+                                    <label for="mes-expiração">Mês de validade</label>
+                                    <input type="text" name="mes" maxlength="2" placeholder="00">
+                                </div>
+                                <div class="col-2">
+                                    <label for="ano-expiração">Ano de validade</label>
+                                    <input type="text" name="ano" maxlength="4" placeholder="2026">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 all-carts">
+                                    <label for="cartões">Aceitamos estes cartões</label>
+                                    <div class="bandeiras"></div>
                                 </div>
                             </div>
                         </div>
