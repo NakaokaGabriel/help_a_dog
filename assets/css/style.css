@@ -167,7 +167,7 @@ FORMULARIOS
     margin: 10px 0;
 }
 
-#contact input, #contact-detail input, #donations-page .info-payments input, #donations-page .personal-info input{
+#contact input, #contact-detail input, #donations-page input{
     border: 2px solid #3f3e3e;
     background: transparent;
     height: 30px;
@@ -182,6 +182,19 @@ FORMULARIOS
     width: 100%;
     padding-left: 5px;
     padding-top: 5px;
+}
+
+#donations-page select{
+    border: 2px solid #3f3e3e;
+    background: transparent;
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+#donations-page option{
+    color: #3f3e3e;
+    background: ##FFF5ED;
 }
 
 #contact button, #contact-detail button{
@@ -976,7 +989,7 @@ DOAÇÕES
 }
 
 #donations-page .valores{
-    margin: 20px 5px;
+    margin: 0 10px 60px 5px;
 }
 
 #donations-page .valores label{
@@ -994,6 +1007,7 @@ DOAÇÕES
     left: -5px;
     top: -1px;
     width: 50px;
+    height: 14px;
 }  
 
 #donations-page .valores .enable-button{
@@ -1017,14 +1031,23 @@ DOAÇÕES
     display: block;
     width: 0;
     height: 0;
-    border-top: 20px solid #ffa623;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid transparent;
+    border-top: 25px solid #ffa623;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid transparent;
     position: absolute;
     top: 45px;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
+}
+
+#donations-page .all-carts{
+    margin: 20px 10px;
+    text-align: center;
+}
+
+#donations-page .bandeiras img{
+    padding: 10px 5px;
 }
 
 #donations-page button{

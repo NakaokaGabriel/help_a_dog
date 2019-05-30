@@ -16,7 +16,7 @@ export default function initValidaDoacao()
                 {
                     const createbutton = document.createElement('span');
                     createbutton.classList.add('enable-button');
-                    createbutton.innerText = '+';
+                    createbutton.innerText = '+ Editar';
                     valores.appendChild(createbutton);
 
                     const numberButton = document.querySelectorAll('.enable-button');
