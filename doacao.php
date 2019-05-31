@@ -104,7 +104,7 @@
                     </div>
                 </div>
         </div>
-            <form name="doacao">
+            <form name="doacao" method="POST">
                 <div class="tips">
                     <div class="row">
                         <div class="col-12">
@@ -151,12 +151,6 @@
                                     <input type="text" name="ano" maxlength="4" placeholder="2026">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12 all-carts">
-                                    <label for="cartões">Aceitamos estes cartões</label>
-                                    <div class="bandeiras"></div>
-                                </div>
-                            </div>
                         </div>
                     </fieldset>
                     <fieldset name="personal-info" class="personal-info">
@@ -182,6 +176,8 @@
                             </div>
                         </div>
                     </fieldset>
+                    <input type="hidden" name="senderToken" class="tokenCartao">
+                    <input type="hidden" name="senderHash" class="hashCartao">
                     <div class="row">
                         <div class="col-12 col-align">
                             <button class="button">DOAR</button>

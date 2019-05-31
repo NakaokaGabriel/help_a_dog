@@ -1,5 +1,3 @@
-import { log } from "util";
-
 export default function initPagseguro()
 {
 
@@ -15,8 +13,6 @@ fetch(url, metodos)
 .then((body) => {
     PagSeguroDirectPayment.setSessionId(body.id);
     const numeroCartao = document.querySelector('#cartao');
-    const brandCart = document.querySelector('.brand-cart');
-    const allBands = document.querySelector('.bandeiras');
     const selectBands = document.querySelector('#bandeiras');
 
     PagSeguroDirectPayment.getPaymentMethods({
@@ -25,11 +21,6 @@ fetch(url, metodos)
 
             for(let key in optionsCards)
             {
-                // Mostra as bandeiras disponiveis para o usuário
-                const bandImage = document.createElement('img');
-                bandImage.setAttribute('src', `https://stc.pagseguro.uol.com.br${optionsCards[key].images.MEDIUM.path}`);
-                allBands.appendChild(bandImage);
-
                 // Coloca qual bandeira o usuário vai escolher
                 const selectBand = document.createElement('option');
                 selectBand.setAttribute('value', optionsCards[key].name);
@@ -38,58 +29,49 @@ fetch(url, metodos)
             }
         },
         error: function(body) {
-            // Callback para chamadas que falharam.
-        },
-        complete: function(body) {
-            // Callback para todas chamadas.
+            console.log(body);
         }
     });
 
-    const eventoCartao = (event) => {
-        const target = event.target.value;
-        const transformingCart = target.replace(/\s/g, '');
-
-        PagSeguroDirectPayment.getBrand({
-            cardBin: transformingCart,
-            success: function(body) {
-                const img = document.createElement('img');
-                if((!img.hasAttribute('src')))
-                {
-                    img.innerHtml = img.setAttribute('src', `https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/68x30/${body.brand.name}.png`);
-                    brandCart.appendChild(img);
-                }
-            },
-            error: function(body) {
-                console.log(numeroClasse);
-            },
-            complete: function(body) {
-              //tratamento comum para todas chamadas
-            }
-        });
-    };
-
-    numeroCartao.addEventListener('change', eventoCartao);
+    PagSeguroDirectPayment.getInstallments({
+        amount: 600.80,
+        maxInstallmentNoInterest: 1,
+        brand: 'visa',
+        success: function(body){
+       	    console.log(body);
+       },
+        error: function(body) {
+       	    // callback para chamadas que falharam.
+       },
+        complete: function(body){
+            // Callback para todas chamadas.
+       }
+    });
 
     const form = document.forms.doacao;
-
     const PegaInfo = (event) => {
         event.preventDefault();
 
-        const cartaoNumero = event.target[2].value;
-        const cvv = event.target[3].value;
-        const positionBand = event.target[4].value;
-        const mes = event.target[6].value;
-        const ano = event.target[7].value;
+        let cartaoNumero = event.target[2].value;
+        let cvv = event.target[3].value;
+        let positionBand = event.target[4].value;
+        let mes = event.target[6].value;
+        let ano = event.target[7].value;
+
+        let modificaNumCartao = cartaoNumero.replace(/\D/g, '');
+        let lowerCaseBand = positionBand.toLowerCase();
 
         // Token do cartão do usuário
         // IMPORTANTE
         PagSeguroDirectPayment.createCardToken({
-            cardNumber: cartaoNumero, // Número do cartão de crédito
-            positionBand, // Bandeira do cartão
+            cardNumber: modificaNumCartao, // Número do cartão de crédito
+            brand: lowerCaseBand, // Bandeira do cartão
             cvv: cvv, // CVV do cartão
             expirationMonth: mes, // Mês da expiração do cartão
             expirationYear: ano, // Ano da expiração do cartão, é necessário os 4 dígitos.
             success: function(body) {
+                const inputToken = document.querySelector('.tokenCartao');
+                inputToken.setAttribute('value', body.card.token);
             },
             error: function(body) {
                 console.log(body);
@@ -100,15 +82,29 @@ fetch(url, metodos)
                 PagSeguroDirectPayment.onSenderHashReady(function(body){
                     if (body.status == 'error') 
                     {
-                        console.log(body.message);
+                        console.log(body.message, 'cu');
                         return false;
                     }
                     else
                     {
+                        const inputHash = document.querySelector('.hashCartao');
+                        inputHash.setAttribute('value', body.senderHash);
                         const dados = new FormData(form);
-                        console.log(dados);
+                        const url = 'dev-pagar.php';
+                        const methods = {
+                            method: 'POST',
+                            body: dados
+                        }
+
+                        fetch(url, methods)
+                        .then((response) => response.json())
+                        .then((body) => {
+                            console.log(body);
+                        })
+                        .catch((e) => {
+                            console.log(e);
+                        })
                     }
-                    // var hash = body.senderHash;
                 });
             }
         });
