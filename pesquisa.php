@@ -105,7 +105,8 @@
                         ').' ';
                         echo '      </div>';
                         echo '      <div class="button-dogs">';
-                        echo '          <a href="detalhe/'.$value['url'].'" class="button">CONHECER</a>';
+                        echo '          <span>'.(($value['disponibilidade'] == 1) ? 'Livre' : 'Adotado').'</span>';
+                        echo '          <a href="detalhe/'.$value['url'].'" class="button">Conhecer</a>';
                         echo '      </div>';
                         echo '  </div>';
                         echo '</div>';

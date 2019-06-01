@@ -12,7 +12,7 @@
     $aDadosArray['itemId1'] = '0001';
     $aDadosArray['itemDescription1'] = 'Doação';
     $aDadosArray['itemAmount1'] = 600.22;
-    $aDadosArray['itemQuantity1'] = '1';
+    $aDadosArray['itemQuantity1'] = 1;
     $aDadosArray['notificationURL'] = 'https://sualoja.com.br/notifica.html';
     $aDadosArray['reference'] = '1001';
     $aDadosArray['senderName'] = 'Jose Comprador';

@@ -152,12 +152,8 @@ PARAGRAFOS
 FORMULARIOS 
 -------------------------------------------*/
 
-#contact .col-12, #contact-detail .col-12{
-    margin: 0 25px 0 5px;
-}
-
-#contact .col-6, #contact-detail .col-6, #donations-page .info-payments .col-6, #donations-page .personal-info .col-6{
-    margin: 0 5px;
+#contact-detail .col-2, #donations-page .col-2, #contact-detail .col-4, #donations-page .col-4, #contact .col-6, #contact-detail .col-6, #donations-page .info-payments .col-6, #donations-page .personal-info .col-6, #contact-detail .col-8, #donations-page .col-8, #contact .col-12, #contact-detail .col-12, #donations-page .col-12{
+    margin: 2px 5px;
 }
 
 #contact label, #contact-detail label, #donations-page .info-payments label, #donations-page .personal-info label{
@@ -171,8 +167,9 @@ FORMULARIOS
     border: 2px solid #3f3e3e;
     background: transparent;
     height: 30px;
-    width: 95%;
+    width: 100%;
     padding-left: 5px;
+    box-sizing: border-box;
 }
 
 #contact textarea, #contact-detail textarea{
@@ -182,13 +179,14 @@ FORMULARIOS
     width: 100%;
     padding-left: 5px;
     padding-top: 5px;
+    box-sizing: border-box;
 }
 
 #donations-page select{
     border: 2px solid #3f3e3e;
     background: transparent;
     width: 100%;
-    height: 35px;
+    height: 30px;
     box-sizing: border-box;
 }
 
@@ -226,13 +224,6 @@ FORMULARIOS
     display: block;
     margin: 10px 0;
     color: #f56e6e;
-}
-
-@media screen and (min-width: 1440px)
-{
-    #contact .col-12, #contact-detail .col-12{
-        margin: 0 35px 0 5px;
-    }
 }
 
 #contact .msg-enviada, #contact-detail .msg-enviada{
@@ -524,16 +515,18 @@ LISTA
 #list-dogs .button-dogs, #suggestion .button-dogs{
     text-align: center;
     background: #ffffff;
-    padding: 20px 0;
     position: relative;
     bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #list-dogs .button-dogs a, #suggestion .button-dogs a{
     color: #ffa623;
-    border: 2px solid #ffa623;
-    padding: 5px 15px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 #list-dogs{
@@ -731,14 +724,15 @@ PESQUISA E FILTRO
 #filter label{
     border: 1px solid #ffa623;
     padding: 10px;
-    margin: 5px 0;
-    color: #3f3e3e;
+    margin: 5px 1px;
+    color: #e88a00;
     font-weight: bold;
     cursor: pointer;
 }
 
 #filter input[type="radio"]{
     visibility: hidden;
+    display: none;
 }
 
 #filter input[type="radio"]:checked + label, #donations input[type="radio"]:checked + label{
@@ -886,10 +880,6 @@ DETALHES
     }
 }
 
-#page-contact textarea{
-    width: 95%;
-}
-
 /* -------------------------------------------
 SOBRE NÓS 
 ------------------------------------------- */
@@ -946,13 +936,26 @@ DOAÇÕES
 }
 
 #donations-page .valors p, #donations-page .info-payments p, #donations-page .personal-info p{
-    margin-bottom: 40px;
+    margin: 20px 0 40px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffa623;
+}
+
+#donations-page .valors p:after, #donations-page .info-payments p:after, #donations-page .personal-info p:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    background: #ffa623;
 }
 
 #donations-page .valors p span, #donations-page .info-payments p span, #donations-page .personal-info p span{
-    background: #ffa623;
-    color: #f7f0e0;
-    padding: 6px 10px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 3px solid #ffa623;
     border-radius: 1000px;
     margin-right: 5px;
 }
@@ -1006,8 +1009,8 @@ DOAÇÕES
     position: relative;
     left: -5px;
     top: -1px;
-    width: 50px;
-    height: 14px;
+    width: 80px;
+    height: 36px;
 }  
 
 #donations-page .valores .enable-button{

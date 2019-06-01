@@ -50,7 +50,7 @@
     <section id="donations-page">
         <div class="container">
         <div class="valors">
-            <p><span>1</span> Valores de pagamento</p>
+            <p><span></span> Valores de pagamento</p>
                 <div class="row">
                     <div class="col-3">
                         <div class="box">
@@ -110,7 +110,7 @@
                         <div class="col-12">
                             <div class="valores">
                                 <label for="valors">R$</label>
-                                <input type="text" name="price" class="money">
+                                <input type="text" name="price" value="600.00" disabled  class="money">
                             </div>
                         </div>
                     </div>                         
@@ -120,7 +120,7 @@
                     </div>
                     <fieldset name="info-payments" class="info-payments">
                         <div class="cart">
-                            <p><span>2</span> Informações do pagamento</p>
+                            <p><span></span> Informações do pagamento</p>
                             <div class="row">
                                 <div class="col-8">
                                     <label for="numero">Número do cartão</label>
@@ -138,23 +138,29 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-12">
                                     <label for="nome">Nome do titular</label>
-                                    <input type="text" name="titular" placeholder="Digite o nome completo">
+                                    <input type="text" name="nome_titular" placeholder="Digite o nome completo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <label for="nome">CPF do titular</label>
+                                    <input type="text" name="cpf_titular" placeholder="Digite o CPF do cartão">
                                 </div>
                                 <div class="col-2">
                                     <label for="mes-expiração">Mês de validade</label>
-                                    <input type="text" name="mes" maxlength="2" placeholder="00">
+                                    <input type="text" name="mes" maxlength="2" placeholder="12">
                                 </div>
                                 <div class="col-2">
                                     <label for="ano-expiração">Ano de validade</label>
-                                    <input type="text" name="ano" maxlength="4" placeholder="2026">
+                                    <input type="text" name="ano" maxlength="4" placeholder="2030">
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset name="personal-info" class="personal-info">
-                        <p><span>3</span> Informações pessoais</p>
+                        <p><span></span> Informações pessoais</p>
                         <div class="row">
                             <div class="col-6">
                                 <label for="nome">Nome</label>
@@ -167,12 +173,54 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <label for="email">E-mail</label>
-                                <input type="email" name="email" placeholder="Digite seu e-mail">
+                                <label for="nome">CPF</label>
+                                <input type="text" name="cpf" placeholder="Digite seu CPF">
                             </div>
                             <div class="col-6">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" placeholder="(xx) xxxxx-xxxx" pattern="(\([0-9]{2}\)[\s])([0-9]{4,5}[-])([0-9]{4})" id="telefone" maxlength="15" name="telefone" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" placeholder="Digite seu e-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep" placeholder="Digite o CEP">
+                            </div>
+                            <div class="col-2">
+                                <label for="estado">Estado</label>
+                                <select name="estado" id="">
+                                    <option value="" disabled selected>Selecione um estado</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" placeholder="Digite a cidade">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" placeholder="Digite o bairro">
+                            </div>
+                            <div class="col-4">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" name="endereco" placeholder="Av.rua">
+                            </div>
+                            <div class="col-2">
+                                <label for="numero">Número</label>
+                                <input type="text" name="numero" placeholder="Digite o número">
+                            </div>
+                            <div class="col-2">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" name="complemento" placeholder="Digite o complemento">
                             </div>
                         </div>
                     </fieldset>
@@ -185,7 +233,6 @@
                     </div>
                 </div>
             </form>
-        </div>
     </section>
     <?php
         // RODAPÉ
