@@ -33,21 +33,6 @@ fetch(url, metodos)
         }
     });
 
-    PagSeguroDirectPayment.getInstallments({
-        amount: 600.80,
-        maxInstallmentNoInterest: 1,
-        brand: 'visa',
-        success: function(body){
-       	    console.log(body);
-       },
-        error: function(body) {
-       	    // callback para chamadas que falharam.
-       },
-        complete: function(body){
-            // Callback para todas chamadas.
-       }
-    });
-
     const form = document.forms.doacao;
     const PegaInfo = (event) => {
         event.preventDefault();
@@ -55,8 +40,8 @@ fetch(url, metodos)
         let cartaoNumero = event.target[2].value;
         let cvv = event.target[3].value;
         let positionBand = event.target[4].value;
-        let mes = event.target[6].value;
-        let ano = event.target[7].value;
+        let mes = event.target[7].value;
+        let ano = event.target[8].value;
 
         let modificaNumCartao = cartaoNumero.replace(/\D/g, '');
         let lowerCaseBand = positionBand.toLowerCase();
