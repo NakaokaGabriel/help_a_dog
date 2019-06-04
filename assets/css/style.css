@@ -518,8 +518,10 @@ LISTA
     position: relative;
     bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    padding: 10px;
+    border-bottom: 4px solid #ffa623;
 }
 
 #list-dogs .button-dogs a, #suggestion .button-dogs a{
