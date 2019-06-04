@@ -526,7 +526,6 @@ LISTA
 
 #list-dogs .button-dogs a, #suggestion .button-dogs a{
     color: #ffa623;
-    font-weight: bold;
     margin: 0;
     padding: 0;
 }
@@ -942,15 +941,6 @@ DOAÇÕES
     font-size: 1.2em;
     font-weight: 600;
     color: #ffa623;
-}
-
-#donations-page .valors p:after, #donations-page .info-payments p:after, #donations-page .personal-info p:after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin: 5px 0;
-    background: #ffa623;
 }
 
 #donations-page .valors p span, #donations-page .info-payments p span, #donations-page .personal-info p span{
