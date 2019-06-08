@@ -25,7 +25,7 @@
     .col-9{width: 575px; margin: 0 auto;}
     .col-10{width: 640px; margin: 0 auto;}
     .col-11{width: 705px; margin: 0 auto;}
-    .col-12{width: 768px; margin: 0 auto;}
+    .col-12{width: 100%; margin: 0 auto;}
 }
 
 @media screen and (min-width: 1024px)
@@ -50,7 +50,7 @@
     .col-9{width: 715px; margin: 0 auto;}
     .col-10{width: 800px; margin: 0 auto;}
     .col-11{width: 880px; margin: 0 auto;}
-    .col-12{width: 960px; margin: 0 auto;}
+    .col-12{width: 100%; margin: 0 auto;}
 }
 
 @media screen and (min-width: 1440px)
@@ -75,5 +75,5 @@
     .col-9{width: 960px; margin: 0 auto;}
     .col-10{width: 1070px; margin: 0 auto;}
     .col-11{width: 1180px; margin: 0 auto;}
-    .col-12{width: 1280px; margin: 0 auto;}
+    .col-12{width: 100%; margin: 0 auto;}
 }
