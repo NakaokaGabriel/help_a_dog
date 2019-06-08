@@ -2,49 +2,61 @@
     // CONFIGURAÇÕES DO PROJETO
     require('includes/config.php');
 
+    $token_card = $_POST['senderToken'];
+    $hash_card = $_POST['senderHash'];
+
+    echo $token_card;
+
     $aDadosArray['email'] = EMAIL_PAGSEGURO;
     $aDadosArray['token'] = TOKEN_PAGSEGURO;
+
+
     $aDadosArray['paymentMode'] = 'default';
     $aDadosArray['paymentMethod'] = 'creditCard';
-    $aDadosArray['receiverEmail'] = 'gabrielnakaoka_99@hotmail.com';
+    $aDadosArray['receiverEmail'] = EMAIL_PAGSEGURO;
     $aDadosArray['currency'] = 'BRL';
-    $aDadosArray['extraAmount'] = '';
-    $aDadosArray['itemId1'] = '0001';
+
+    $aDadosArray['itemId1'] = '1';
     $aDadosArray['itemDescription1'] = 'Doação';
-    $aDadosArray['itemAmount1'] = 600.22;
-    $aDadosArray['itemQuantity1'] = 1;
+    $aDadosArray['itemAmount1'] = '500.00';
+    $aDadosArray['itemQuantity1'] = '1';
+
     $aDadosArray['notificationURL'] = 'https://sualoja.com.br/notifica.html';
+
     $aDadosArray['reference'] = '1001';
     $aDadosArray['senderName'] = 'Jose Comprador';
-    $aDadosArray['senderCPF'] = 22111944785;
-    $aDadosArray['senderAreaCode'] = 11;
-    $aDadosArray['senderPhone'] = 56273440;
+    $aDadosArray['senderCPF'] = '22111944785';
+    $aDadosArray['senderAreaCode'] = '11';
+    $aDadosArray['senderPhone'] = '56273440';
     $aDadosArray['senderEmail'] = 'c00430386760712969645@sandbox.pagseguro.com.br';
-    $aDadosArray['senderHash'] = $_POST['senderHash'];
+    $aDadosArray['senderHash'] = $hash_card;
+
     $aDadosArray['shippingAddressRequired'] = true;
     $aDadosArray['shippingAddressStreet'] = 'Av. Brig. Faria Lima';
-    $aDadosArray['shippingAddressNumber'] = 1384;
+    $aDadosArray['shippingAddressNumber'] = '1384';
     $aDadosArray['shippingAddressComplement'] = '5o andar';
     $aDadosArray['shippingAddressDistrict'] = 'Jardim Paulistano';
-    $aDadosArray['shippingAddressPostalCode'] = 01452002;
+    $aDadosArray['shippingAddressPostalCode'] = '01452002';
     $aDadosArray['shippingAddressCity'] = 'Sao Paulo';
     $aDadosArray['shippingAddressState'] = 'SP';
+
     $aDadosArray['shippingAddressCountry'] = 'BRA';
-    $aDadosArray['shippingType'] = 1;
-    $aDadosArray['creditCardToken'] = $_POST['senderToken'];
-    $aDadosArray['installmentQuantity'] = 1;
-    $aDadosArray['installmentValue'] = 0;
-    $aDadosArray['noInterestInstallmentQuantity'] = '';
+    $aDadosArray['shippingType'] = '1';
+    $aDadosArray['creditCardToken'] = $token_card;
+    $aDadosArray['installmentQuantity'] = '1';
+    $aDadosArray['installmentValue'] = '0.00';
+    $aDadosArray['noInterestInstallmentQuantity'] = 1;
+
     $aDadosArray['creditCardHolderName'] = 'Jose Comprador';
-    $aDadosArray['creditCardHolderCPF'] = 22111944785;
+    $aDadosArray['creditCardHolderCPF'] = '22111944785';
     $aDadosArray['creditCardHolderBirthDate'] = '27/10/1987';
-    $aDadosArray['creditCardHolderAreaCode'] = 11;
-    $aDadosArray['creditCardHolderPhone'] = 56273440;
+    $aDadosArray['creditCardHolderAreaCode'] = '11';
+    $aDadosArray['creditCardHolderPhone'] = '56273440';
     $aDadosArray['billingAddressStreet'] = 'Av. Brig. Faria Lima';
-    $aDadosArray['billingAddressNumber'] = 1384;
+    $aDadosArray['billingAddressNumber'] = '1384';
     $aDadosArray['billingAddressComplement'] = '5o andar';
     $aDadosArray['billingAddressDistrict'] = 'Jardim Paulistano';
-    $aDadosArray['billingAddressPostalCode'] = 01452002;
+    $aDadosArray['billingAddressPostalCode'] = '01452002';
     $aDadosArray['billingAddressCity'] = 'Sao Paulo';
     $aDadosArray['billingAddressState'] = 'SP';
     $aDadosArray['billingAddressCountry'] = 'BRA';
