@@ -5,11 +5,8 @@
     $token_card = $_POST['senderToken'];
     $hash_card = $_POST['senderHash'];
 
-    echo $token_card;
-
     $aDadosArray['email'] = EMAIL_PAGSEGURO;
     $aDadosArray['token'] = TOKEN_PAGSEGURO;
-
 
     $aDadosArray['paymentMode'] = 'default';
     $aDadosArray['paymentMethod'] = 'creditCard';
@@ -18,7 +15,7 @@
 
     $aDadosArray['itemId1'] = '1';
     $aDadosArray['itemDescription1'] = 'Doação';
-    $aDadosArray['itemAmount1'] = '500.00';
+    $aDadosArray['itemAmount1'] = '600.00';
     $aDadosArray['itemQuantity1'] = '1';
 
     $aDadosArray['notificationURL'] = 'https://sualoja.com.br/notifica.html';
@@ -32,20 +29,11 @@
     $aDadosArray['senderHash'] = $hash_card;
 
     $aDadosArray['shippingAddressRequired'] = true;
-    $aDadosArray['shippingAddressStreet'] = 'Av. Brig. Faria Lima';
-    $aDadosArray['shippingAddressNumber'] = '1384';
-    $aDadosArray['shippingAddressComplement'] = '5o andar';
-    $aDadosArray['shippingAddressDistrict'] = 'Jardim Paulistano';
-    $aDadosArray['shippingAddressPostalCode'] = '01452002';
-    $aDadosArray['shippingAddressCity'] = 'Sao Paulo';
-    $aDadosArray['shippingAddressState'] = 'SP';
 
-    $aDadosArray['shippingAddressCountry'] = 'BRA';
-    $aDadosArray['shippingType'] = '1';
     $aDadosArray['creditCardToken'] = $token_card;
     $aDadosArray['installmentQuantity'] = '1';
-    $aDadosArray['installmentValue'] = '0.00';
-    $aDadosArray['noInterestInstallmentQuantity'] = 1;
+    $aDadosArray['installmentValue'] = '600.00';
+    $aDadosArray['noInterestInstallmentQuantity'] = 2;
 
     $aDadosArray['creditCardHolderName'] = 'Jose Comprador';
     $aDadosArray['creditCardHolderCPF'] = '22111944785';
