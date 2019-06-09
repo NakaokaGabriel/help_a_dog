@@ -104,7 +104,7 @@
                     </div>
                 </div>
         </div>
-            <form name="doacao" action="dev-pagar.php" method="POST">
+            <form name="doacao" action="dev-pagar.php" method="post">
                 <div class="tips">
                     <div class="row">
                         <div class="col-12">
