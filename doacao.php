@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="col-2">
                                     <label for="numero">CVV</label>
-                                    <input type="text" name="cvv" maxlength="3" placeholder="xxx">
+                                    <input type="text" name="cvv" maxlength="3" placeholder="xxx" id="cvv">
                                 </div>
                                 <div class="col-2">
                                     <label for="numero">Bandeira</label>
@@ -150,11 +150,11 @@
                                 </div>
                                 <div class="col-2">
                                     <label for="mes-expiração">Mês de validade</label>
-                                    <input type="text" name="mes" maxlength="2" placeholder="12">
+                                    <input type="text" name="mes" id="mes" maxlength="2" placeholder="12">
                                 </div>
                                 <div class="col-2">
                                     <label for="ano-expiração">Ano de validade</label>
-                                    <input type="text" name="ano" maxlength="4" placeholder="2030">
+                                    <input type="text" name="ano" id="ano" maxlength="4" placeholder="2030">
                                 </div>
                             </div>
                         </div>
