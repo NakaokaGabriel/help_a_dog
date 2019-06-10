@@ -21,7 +21,7 @@
     $aDadosArray['notificationURL'] = 'https://sualoja.com.br/notifica.html';
 
     $aDadosArray['reference'] = '1001';
-    $aDadosArray['senderName'] = 'Jose Comprador';
+    $aDadosArray['senderName'] = $_POST['nome'] . ' ' . $_POST['sobrenome'];
     $aDadosArray['senderCPF'] = '22111944785';
     $aDadosArray['senderAreaCode'] = '11';
     $aDadosArray['senderPhone'] = '56273440';
