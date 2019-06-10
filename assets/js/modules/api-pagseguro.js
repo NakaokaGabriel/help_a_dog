@@ -14,6 +14,9 @@ fetch(url, metodos)
     const formDoacao = document.forms.doacao;
     const cartao = document.querySelector('#cartao');
     const selectBands = document.querySelector('#bandeiras');
+    const selectCvv = document.querySelector('#cvv');
+    const selectMes = document.querySelector('#mes');
+    const selectAno = document.querySelector('#ano');
 
     // Seleciona os metodos de pagamento do cartão
     PagSeguroDirectPayment.getPaymentMethods({
@@ -35,29 +38,56 @@ fetch(url, metodos)
             console.log(body);
         },
         complete: function(body) {
-            formDoacao.addEventListener('submit', () => {
+            formDoacao.addEventListener('submit', (event) => {
+                event.preventDefault();
 
                 const valorCartao = cartao.value;
                 const numeroCartao = valorCartao.replace(/\D/g, '');
+                const bandeira = selectBands.value.toLowerCase();
+                const cvv = selectCvv.value;
+                const mes = selectMes.value;
+                const ano = selectAno.value;
+
+                console.log(bandeira);
 
                 // Envia o token do cartão para o meu formulario
                 PagSeguroDirectPayment.createCardToken({
-                    cardNumber: '4111111111111111', // Número do cartão de crédito
-                    brand: 'visa', // Bandeira do cartão
-                    cvv: '123', // CVV do cartão
-                    expirationMonth: '12', // Mês da expiração do cartão
-                    expirationYear: '2030', // Ano da expiração do cartão, é necessário os 4 dígitos.
+                    cardNumber: numeroCartao, // Número do cartão de crédito
+                    brand: bandeira, // Bandeira do cartão
+                    cvv: cvv, // CVV do cartão
+                    expirationMonth: mes, // Mês da expiração do cartão
+                    expirationYear: ano, // Ano da expiração do cartão, é necessário os 4 dígitos.
                     success: function(body) {
                         // Seleciona o formulario para preencher o token
                         const inputToken = document.querySelector('.tokenCartao');
                         inputToken.value = body.card.token;
-                    }
-                });
+                    },
+                    error: function(body) {
+                        console.log(body);
+                    },
+                    complete: function(body) {
+                        // Seleciona o formulario para preencher o Hash
+                        const inputToken = document.querySelector('.hashCartao');
+                        PagSeguroDirectPayment.onSenderHashReady(function(body){
+                            if(body.status == 'error') {
+                                console.log(body.message);
+                                return false;
+                            }
+                            else {
+                                inputToken.value = body.senderHash;
+                                const dados = new FormData(formDoacao);
 
-                // Seleciona o formulario para preencher o Hash
-                const inputToken = document.querySelector('.hashCartao');
-                    PagSeguroDirectPayment.onSenderHashReady(function(body){
-                    inputToken.value = body.senderHash;
+                                const urlDados = 'dev-pagar.php';
+                                const metodos = {method: 'POST', body: dados };
+
+                                fetch(urlDados, metodos)
+                                .then((response) => response.json())
+                                .then((body) => {
+                                    console.log(body);
+                                });
+                            }
+                        });
+                    }
                 });
             });
         }
