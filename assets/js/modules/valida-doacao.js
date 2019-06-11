@@ -23,7 +23,7 @@ export default function initValidaDoacao()
                     {
                         createbutton.remove();
                     }
-        
+         
                     const openInputMoney = () => {
                         money.removeAttribute('disabled');
                         createbutton.remove();
