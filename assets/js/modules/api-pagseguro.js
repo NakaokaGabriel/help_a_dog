@@ -82,7 +82,7 @@ fetch(url, metodos)
                                 const dados = new FormData(formDoacao);
 
                                 const urlDados = 'dev-pagar.php';
-                                const metodos = {method: 'POST', body: dados };
+                                const metodos = { method: 'POST', body: dados };
 
                                 fetch(urlDados, metodos)
                                 .then((response) => response.json())

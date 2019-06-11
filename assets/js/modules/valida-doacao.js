@@ -6,7 +6,6 @@ export default function initValidaDoacao()
     
     if(moneySelect && money && valores)
     {
-        money.value = '0.00'.replace('.', ',');
         const moneyTransfer = (event) => {
             if(event.target.checked)
             {
@@ -25,7 +24,6 @@ export default function initValidaDoacao()
                     }
          
                     const openInputMoney = () => {
-                        money.removeAttribute('disabled');
                         createbutton.remove();
                     }
         
