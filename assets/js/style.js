@@ -9,7 +9,7 @@ import AtivaMenu from './modules/ativaMenu.js';
 import ValidaForms from './modules/valida-forms.js';
 import FetchContato from './modules/fetch-contato.js';
 import FetchAdocao from './modules/fetch-adocao.js';
-// import initValidaDoacao from './modules/valida-doacao.js';
+import initValidaDoacao from './modules/valida-doacao.js';
 import initPagseguro from './modules/api-pagseguro.js';
 import CartMask from './modules/mascara-cartao.js';
 
@@ -50,7 +50,7 @@ fetchAdocao.init();
 initPagseguro();
 
 // VALIDAÇÃO DOS CAMPOS DE DOAÇÃO
-// initValidaDoacao();
+initValidaDoacao();
 
 // Mascara cartao de credito
 const cartMask = new CartMask('#cartao');

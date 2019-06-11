@@ -18,9 +18,15 @@ fetch(url, metodos)
     const selectMes = document.querySelector('#mes');
     const selectAno = document.querySelector('#ano');
 
+    const quantidadePreco = document.querySelector('.money');
+
     // Seleciona os metodos de pagamento do cartão
     PagSeguroDirectPayment.getPaymentMethods({
-        amount: 600.00,
+        amount: quantidadePreco.addEventListener('submit', (event) => {
+            const preco = event.target.value;
+            const precoTotal = preco.replace(',', '.');
+            return +precoTotal;
+        }),
         success: function(body) {
             const optionsCards = body.paymentMethods.CREDIT_CARD.options;
 
@@ -47,8 +53,6 @@ fetch(url, metodos)
                 const cvv = selectCvv.value;
                 const mes = selectMes.value;
                 const ano = selectAno.value;
-
-                console.log(bandeira);
 
                 // Envia o token do cartão para o meu formulario
                 PagSeguroDirectPayment.createCardToken({

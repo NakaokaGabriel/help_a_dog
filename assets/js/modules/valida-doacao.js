@@ -6,12 +6,11 @@ export default function initValidaDoacao()
     
     if(moneySelect && money && valores)
     {
-        money.value = '00.00'.replace('.', ',');
+        money.value = '0.00'.replace('.', ',');
         const moneyTransfer = (event) => {
             if(event.target.checked)
             {
                 money.value = event.target.value;
-                money.setAttribute('disabled', '');
                 if(money.value === event.target.value)
                 {
                     const createbutton = document.createElement('span');
