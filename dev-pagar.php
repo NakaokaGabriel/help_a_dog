@@ -5,6 +5,9 @@
     $token_card = $_POST['senderToken'];
     $hash_card = $_POST['senderHash'];
 
+    $doacao_preco = $_POST['price'];
+    $preco_total = str_replace(',', '.', $doacao_preco);
+
     $aDadosArray['email'] = EMAIL_PAGSEGURO;
     $aDadosArray['token'] = TOKEN_PAGSEGURO;
 
@@ -15,14 +18,14 @@
 
     $aDadosArray['itemId1'] = '1';
     $aDadosArray['itemDescription1'] = 'Doação';
-    $aDadosArray['itemAmount1'] = '600.00';
+    $aDadosArray['itemAmount1'] = $preco_total;
     $aDadosArray['itemQuantity1'] = '1';
 
     $aDadosArray['notificationURL'] = 'https://sualoja.com.br/notifica.html';
 
     $aDadosArray['reference'] = '1001';
     $aDadosArray['senderName'] = $_POST['nome'] . ' ' . $_POST['sobrenome'];
-    $aDadosArray['senderCPF'] = '22111944785';
+    $aDadosArray['senderCPF'] = $_POST['cpf'];
     $aDadosArray['senderAreaCode'] = '11';
     $aDadosArray['senderPhone'] = '56273440';
     $aDadosArray['senderEmail'] = 'c00430386760712969645@sandbox.pagseguro.com.br';
@@ -32,11 +35,11 @@
 
     $aDadosArray['creditCardToken'] = $token_card;
     $aDadosArray['installmentQuantity'] = '1';
-    $aDadosArray['installmentValue'] = '600.00';
+    $aDadosArray['installmentValue'] = $preco_total;
     $aDadosArray['noInterestInstallmentQuantity'] = 2;
 
-    $aDadosArray['creditCardHolderName'] = 'Jose Comprador';
-    $aDadosArray['creditCardHolderCPF'] = '22111944785';
+    $aDadosArray['creditCardHolderName'] = $_POST['nome_titular'];
+    $aDadosArray['creditCardHolderCPF'] = $_POST['cpf_titular'];
     $aDadosArray['creditCardHolderBirthDate'] = '27/10/1987';
     $aDadosArray['creditCardHolderAreaCode'] = '11';
     $aDadosArray['creditCardHolderPhone'] = '56273440';

@@ -110,7 +110,7 @@
                         <div class="col-12">
                             <div class="valores">
                                 <label for="valors">R$</label>
-                                <input type="text" name="price" value="600.00" disabled  class="money">
+                                <input type="text" name="price" class="money">
                             </div>
                         </div>
                     </div>                         
