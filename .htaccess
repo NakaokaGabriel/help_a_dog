@@ -15,6 +15,7 @@ RewriteRule ^(filtro)/?$ filtro.php [NC,L]
 RewriteRule ^(doacao)/?$ doacao.php [NC,L]
 RewriteRule ^(contato)/?$ contato.php [NC,L]
 RewriteRule ^(sobre)/?$ sobre.php [NC,L]
+RewriteRule ^(agradecimento)/?$ agradecimento.php [NC,L]
 
 RewriteRule ^(detalhe)/([a-z0-9-]+)/?$ detalhe.php?url=$2 [NC]
 RewriteRule ^(adocao)/([a-z0-9-]+)/?$ adocao.php?pagina_atual=$2 [NC]

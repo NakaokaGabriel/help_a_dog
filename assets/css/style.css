@@ -1005,6 +1005,10 @@ DOAÇÕES
     height: 36px;
 }  
 
+#donations-page .erro-mensagem{
+    border: 1px solid #ff3312 !important;
+}
+
 #donations-page .valores .enable-button{
     background: #ffa623;
     padding: 10px 15px;
@@ -1016,24 +1020,10 @@ DOAÇÕES
 #donations-page .tips-payments p{
     display: inline-block;
     background: #ffa623;
-    padding: 15px 20px;
+    padding: 10px 10px;
     color: #f7f0e0;
     position: relative;
-}
-
-#donations-page .tips-payments p.active:after{
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 25px solid #ffa623;
-    border-right: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 25px solid transparent;
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translate3d(-50%, 0, 0);
+    top: 1px;
 }
 
 #donations-page .all-carts{
@@ -1044,4 +1034,24 @@ DOAÇÕES
 #donations-page button{
     background: #ffa623;
     color: #f7f0e0;
+}
+
+.congratulations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.congratulations .center-box {
+    text-align: center;
+}
+
+.congratulations .center-box h1, .congratulations .center-box p, .congratulations .center-box a {
+    margin: 20px 0;
+}
+
+.congratulations .center-box h1 {
+    color: #ffa623;
 }
