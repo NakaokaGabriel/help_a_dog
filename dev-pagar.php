@@ -43,13 +43,13 @@
     $aDadosArray['creditCardHolderBirthDate'] = '27/10/1987';
     $aDadosArray['creditCardHolderAreaCode'] = '11';
     $aDadosArray['creditCardHolderPhone'] = '56273440';
-    $aDadosArray['billingAddressStreet'] = 'Av. Brig. Faria Lima';
-    $aDadosArray['billingAddressNumber'] = '1384';
-    $aDadosArray['billingAddressComplement'] = '5o andar';
-    $aDadosArray['billingAddressDistrict'] = 'Jardim Paulistano';
-    $aDadosArray['billingAddressPostalCode'] = '01452002';
-    $aDadosArray['billingAddressCity'] = 'Sao Paulo';
-    $aDadosArray['billingAddressState'] = 'SP';
+    $aDadosArray['billingAddressStreet'] = $_POST['endereco'];
+    $aDadosArray['billingAddressNumber'] = $_POST['numero'];
+    $aDadosArray['billingAddressComplement'] = $_POST['complemento'];
+    $aDadosArray['billingAddressDistrict'] = $_POST['bairro'];
+    $aDadosArray['billingAddressPostalCode'] = $_POST['cep'];
+    $aDadosArray['billingAddressCity'] = $_POST['cidade'];
+    $aDadosArray['billingAddressState'] = $_POST['estado'];
     $aDadosArray['billingAddressCountry'] = 'BRA';
 
     $buildQuery = http_build_query($aDadosArray);

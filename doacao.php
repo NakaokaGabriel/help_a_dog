@@ -115,8 +115,7 @@
                         </div>
                     </div>                         
                     <div class="tips-payments">
-                        <p class="active">Cartão de credito</p>
-                        <p>Boleto</p>
+                        <p>Cartão de Credito</p>
                     </div>
                     <fieldset name="info-payments" class="info-payments">
                         <div class="cart">
@@ -146,7 +145,7 @@
                             <div class="row">
                                 <div class="col-8">
                                     <label for="nome">CPF do titular</label>
-                                    <input type="text" name="cpf_titular" placeholder="Digite o CPF do cartão">
+                                    <input type="text" value="22111944785" name="cpf_titular" maxlength="11" placeholder="Digite o CPF do cartão">
                                 </div>
                                 <div class="col-2">
                                     <label for="mes-expiração">Mês de validade</label>
@@ -174,7 +173,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <label for="nome">CPF</label>
-                                <input type="text" name="cpf" placeholder="Digite seu CPF">
+                                <input type="text" value="22111944785" name="cpf" maxlength="11" placeholder="Digite seu CPF">
                             </div>
                             <div class="col-6">
                                 <label for="telefone">Telefone</label>
